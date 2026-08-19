@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>enum — Support for enumerations &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enum — Support for enumerations &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -181,7 +181,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -330,30 +330,30 @@ are dealt with in an enumeration.</p>
 <a class="reference internal" href="#enum.StrEnum" title="enum.StrEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">StrEnum</span></code></a> defaults to the lower-cased version of the member name,
 while other Enums default to 1 and increase from there.</p>
 </div></blockquote>
-<p><a class="reference internal" href="#enum.property" title="enum.property"><code class="xref py py-func docutils literal notranslate"><span class="pre">property()</span></code></a></p>
+<p><a class="reference internal" href="#enum.property" title="enum.property"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;~enum.property</span></code></a></p>
 <blockquote>
 <div><p>Allows <a class="reference internal" href="#enum.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a> members to have attributes without conflicting with
 member names.  The <code class="docutils literal notranslate"><span class="pre">value</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> attributes are implemented this
 way.</p>
 </div></blockquote>
-<p><a class="reference internal" href="#enum.unique" title="enum.unique"><code class="xref py py-func docutils literal notranslate"><span class="pre">unique()</span></code></a></p>
+<p><a class="reference internal" href="#enum.unique" title="enum.unique"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;unique</span></code></a></p>
 <blockquote>
 <div><p>Enum class decorator that ensures only one name is bound to any one value.</p>
 </div></blockquote>
-<p><a class="reference internal" href="#enum.verify" title="enum.verify"><code class="xref py py-func docutils literal notranslate"><span class="pre">verify()</span></code></a></p>
+<p><a class="reference internal" href="#enum.verify" title="enum.verify"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;verify</span></code></a></p>
 <blockquote>
 <div><p>Enum class decorator that checks user-selectable constraints on an
 enumeration.</p>
 </div></blockquote>
-<p><a class="reference internal" href="#enum.member" title="enum.member"><code class="xref py py-func docutils literal notranslate"><span class="pre">member()</span></code></a></p>
+<p><a class="reference internal" href="#enum.member" title="enum.member"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;member</span></code></a></p>
 <blockquote>
 <div><p>Make <code class="docutils literal notranslate"><span class="pre">obj</span></code> a member.  Can be used as a decorator.</p>
 </div></blockquote>
-<p><a class="reference internal" href="#enum.nonmember" title="enum.nonmember"><code class="xref py py-func docutils literal notranslate"><span class="pre">nonmember()</span></code></a></p>
+<p><a class="reference internal" href="#enum.nonmember" title="enum.nonmember"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;nonmember</span></code></a></p>
 <blockquote>
 <div><p>Do not make <code class="docutils literal notranslate"><span class="pre">obj</span></code> a member.  Can be used as a decorator.</p>
 </div></blockquote>
-<p><a class="reference internal" href="#enum.global_enum" title="enum.global_enum"><code class="xref py py-func docutils literal notranslate"><span class="pre">global_enum()</span></code></a></p>
+<p><a class="reference internal" href="#enum.global_enum" title="enum.global_enum"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;global_enum</span></code></a></p>
 <blockquote>
 <div><p>Modify the <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str()</span></code></a> and <a class="reference internal" href="functions.html#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> of an enum
 to show its members as belonging to the module instead of its class,
@@ -967,8 +967,8 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">__iter__(self):</span></span></dt>
+<dt class="sig sig-object py" id="enum.Flag.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enum.Flag.__iter__" title="Link to this definition">¶</a></dt>
 <dd><p>Returns all contained non-alias members:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="p">)</span>
 <span class="go">[&lt;Color.RED: 1&gt;]</span>
@@ -982,8 +982,8 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">__len__(self):</span></span></dt>
+<dt class="sig sig-object py" id="enum.Flag.__len__">
+<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enum.Flag.__len__" title="Link to this definition">¶</a></dt>
 <dd><p>Returns number of members in flag:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span><span class="p">)</span>
 <span class="go">1</span>
@@ -997,8 +997,8 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">__bool__(self):</span></span></dt>
+<dt class="sig sig-object py" id="enum.Flag.__bool__">
+<span class="sig-name descname"><span class="pre">__bool__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enum.Flag.__bool__" title="Link to this definition">¶</a></dt>
 <dd><p>Returns <em>True</em> if any members in flag, <em>False</em> otherwise:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span><span class="p">)</span>
 <span class="go">True</span>
@@ -1046,8 +1046,8 @@ the results of those operations are (aliases of) members of the enumeration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">__invert__(self):</span></span></dt>
+<dt class="sig sig-object py" id="enum.Flag.__invert__">
+<span class="sig-name descname"><span class="pre">__invert__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enum.Flag.__invert__" title="Link to this definition">¶</a></dt>
 <dd><p>Returns all the flags in <em>type(self)</em> that are not in <em>self</em>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">~</span><span class="n">white</span>
 <span class="go">&lt;Color: 0&gt;</span>
@@ -1405,7 +1405,7 @@ member is an incompatible type.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="enum.property">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">property</span></span><a class="headerlink" href="#enum.property" title="Link to this definition">¶</a></dt>
-<dd><p>A decorator similar to the built-in <em>property</em>, but specifically for
+<dd><p>A decorator similar to the built-in <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;property</span></code></a>, but specifically for
 enumerations.  It allows member attributes to have the same names as members
 themselves.</p>
 <div class="admonition note">
@@ -1634,7 +1634,7 @@ base class by mixing in the <code class="docutils literal notranslate"><span cla
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -1680,7 +1680,7 @@ base class by mixing in the <code class="docutils literal notranslate"><span cla
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

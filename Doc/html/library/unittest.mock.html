@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>unittest.mock — mock object library &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unittest.mock — mock object library &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -212,7 +212,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -2415,7 +2415,7 @@ return something else:</p>
 <span class="go">True</span>
 </pre></div>
 </div>
-<p>The return value of <code class="xref py py-meth docutils literal notranslate"><span class="pre">MagicMock.__iter__()</span></code> can be any iterable object and isn’t
+<p>The return value of <code class="xref py py-meth docutils literal notranslate"><span class="pre">__iter__()</span></code> can be any iterable object and isn’t
 required to be an iterator:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mock</span> <span class="o">=</span> <span class="n">MagicMock</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mock</span><span class="o">.</span><span class="fm">__iter__</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
@@ -2724,7 +2724,7 @@ behaviour you can switch it off by setting the module level switch
 <h3>mock_open<a class="headerlink" href="#mock-open" title="Link to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="unittest.mock.mock_open">
-<span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">mock_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.mock_open" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">unittest.mock.</span></span><span class="sig-name descname"><span class="pre">mock_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.mock.mock_open" title="Link to this definition">¶</a></dt>
 <dd><p>A helper function to create a mock to replace the use of <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>. It works
 for <code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code> called directly or used as a context manager.</p>
 <p>The <em>mock</em> argument is the mock object to configure. If <code class="docutils literal notranslate"><span class="pre">None</span></code> (the
@@ -3263,7 +3263,7 @@ exception is raised.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -3309,7 +3309,7 @@ exception is raised.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

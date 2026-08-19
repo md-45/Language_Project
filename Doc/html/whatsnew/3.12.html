@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>What’s New In Python 3.12 &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What’s New In Python 3.12 &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -276,7 +276,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">What’s New in Python</a> &#187;</li>
@@ -403,7 +403,7 @@ OpenSSL does not provide them.</p></li>
 <ul class="simple">
 <li><p><a class="reference internal" href="#whatsnew312-pep692"><span class="std std-ref">PEP 692</span></a>, using <a class="reference internal" href="../library/typing.html#typing.TypedDict" title="typing.TypedDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></a> to
 annotate <a class="reference internal" href="../glossary.html#term-argument"><span class="xref std std-term">**kwargs</span></a></p></li>
-<li><p><a class="reference internal" href="#whatsnew312-pep698"><span class="std std-ref">PEP 698</span></a>, <a class="reference internal" href="../library/typing.html#typing.override" title="typing.override"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.override()</span></code></a> decorator</p></li>
+<li><p><a class="reference internal" href="#whatsnew312-pep698"><span class="std std-ref">PEP 698</span></a>, <a class="reference internal" href="../library/typing.html#typing.override" title="typing.override"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;typing.override</span></code></a> decorator</p></li>
 </ul>
 <p>Important deprecations, removals or restrictions:</p>
 <ul class="simple">
@@ -729,7 +729,7 @@ typed dictionaries:</p>
 </section>
 <section id="pep-698-override-decorator-for-static-typing">
 <span id="whatsnew312-pep698"></span><h3>PEP 698: Override Decorator for Static Typing<a class="headerlink" href="#pep-698-override-decorator-for-static-typing" title="Link to this heading">¶</a></h3>
-<p>A new decorator <a class="reference internal" href="../library/typing.html#typing.override" title="typing.override"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.override()</span></code></a> has been added to the <a class="reference internal" href="../library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a>
+<p>A new decorator <a class="reference internal" href="../library/typing.html#typing.override" title="typing.override"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;typing.override</span></code></a> has been added to the <a class="reference internal" href="../library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a>
 module. It indicates to type checkers that the method is intended to override
 a method in a superclass. This allows type checkers to catch mistakes where
 a method that is intended to override something in a base class
@@ -1211,7 +1211,7 @@ Waygood in <a class="reference external" href="https://github.com/python/cpython
 <li><p>All <a class="reference internal" href="../library/typing.html#typing.TypedDict" title="typing.TypedDict"><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.TypedDict</span></code></a> and <a class="reference internal" href="../library/typing.html#typing.NamedTuple" title="typing.NamedTuple"><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.NamedTuple</span></code></a> classes now have the
 <code class="docutils literal notranslate"><span class="pre">__orig_bases__</span></code> attribute. (Contributed by Adrian Garcia Badaracco in
 <a class="reference external" href="https://github.com/python/cpython/issues/103699">gh-103699</a>.)</p></li>
-<li><p>Add <code class="docutils literal notranslate"><span class="pre">frozen_default</span></code> parameter to <a class="reference internal" href="../library/typing.html#typing.dataclass_transform" title="typing.dataclass_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.dataclass_transform()</span></code></a>.
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">frozen_default</span></code> parameter to <a class="reference internal" href="../library/typing.html#typing.dataclass_transform" title="typing.dataclass_transform"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;typing.dataclass_transform</span></code></a>.
 (Contributed by Erik De Bonte in <a class="reference external" href="https://github.com/python/cpython/issues/99957">gh-99957</a>.)</p></li>
 </ul>
 </section>
@@ -1671,17 +1671,6 @@ command-line interface has been deprecated since Python 3.13.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">load_module()</span></code> method: use <code class="docutils literal notranslate"><span class="pre">exec_module()</span></code> instead.</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../library/locale.html#module-locale" title="locale: Internationalization services."><code class="xref py py-class docutils literal notranslate"><span class="pre">locale</span></code></a>:</p>
-<ul>
-<li><p>The <a class="reference internal" href="../library/locale.html#locale.getdefaultlocale" title="locale.getdefaultlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">getdefaultlocale()</span></code></a> function
-has been deprecated since Python 3.11.
-Its removal was originally planned for Python 3.13 (<a class="reference external" href="https://github.com/python/cpython/issues/90817">gh-90817</a>),
-but has been postponed to Python 3.15.
-Use <a class="reference internal" href="../library/locale.html#locale.getlocale" title="locale.getlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">getlocale()</span></code></a>, <a class="reference internal" href="../library/locale.html#locale.setlocale" title="locale.setlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">setlocale()</span></code></a>,
-and <a class="reference internal" href="../library/locale.html#locale.getencoding" title="locale.getencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">getencoding()</span></code></a> instead.
-(Contributed by Hugo van Kemenade in <a class="reference external" href="https://github.com/python/cpython/issues/111187">gh-111187</a>.)</p></li>
-</ul>
-</li>
 <li><p><a class="reference internal" href="../library/pathlib.html#module-pathlib" title="pathlib: Object-oriented filesystem paths"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code></a>:</p>
 <ul>
 <li><p><a class="reference internal" href="../library/pathlib.html#pathlib.PurePath.is_reserved" title="pathlib.PurePath.is_reserved"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PurePath.is_reserved()</span></code></a>
@@ -1734,7 +1723,7 @@ passing <code class="docutils literal notranslate"><span class="pre">None</span>
 since Python 3.13.
 Use <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">TD(TypedDict):</span> <span class="pre">pass</span></code> or <code class="docutils literal notranslate"><span class="pre">TD</span> <span class="pre">=</span> <span class="pre">TypedDict(&quot;TD&quot;,</span> <span class="pre">{})</span></code>
 to create a TypedDict with zero field.</p></li>
-<li><p>The <a class="reference internal" href="../library/typing.html#typing.no_type_check_decorator" title="typing.no_type_check_decorator"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.no_type_check_decorator()</span></code></a> decorator function
+<li><p>The <a class="reference internal" href="../library/typing.html#typing.no_type_check_decorator" title="typing.no_type_check_decorator"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;typing.no_type_check_decorator</span></code></a> decorator function
 has been deprecated since Python 3.13.
 After eight years in the <a class="reference internal" href="../library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> module,
 it has yet to be supported by any major type checker.</p></li>
@@ -2522,7 +2511,7 @@ so only a very small set of users might be affected.
 This change helps with interpreter isolation.  Furthermore, <a class="reference internal" href="../library/syslog.html#module-syslog" title="syslog: An interface to the Unix syslog library routines."><code class="xref py py-mod docutils literal notranslate"><span class="pre">syslog</span></code></a> is a wrapper
 around process-global resources, which are best managed from the main interpreter.
 (Contributed by Donghee Na in <a class="reference external" href="https://github.com/python/cpython/issues/99127">gh-99127</a>.)</p></li>
-<li><p>The undocumented locking behavior of <a class="reference internal" href="../library/functools.html#functools.cached_property" title="functools.cached_property"><code class="xref py py-func docutils literal notranslate"><span class="pre">cached_property()</span></code></a>
+<li><p>The undocumented locking behavior of <a class="reference internal" href="../library/functools.html#functools.cached_property" title="functools.cached_property"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;~functools.cached_property</span></code></a>
 is removed, because it locked across all instances of the class, leading to high
 lock contention. This means that a cached property getter function could now run
 more than once for a single instance, if two threads race. For most simple
@@ -3402,7 +3391,7 @@ internals.
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >What’s New in Python</a> &#187;</li>
@@ -3447,7 +3436,7 @@ internals.
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

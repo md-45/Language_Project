@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>Built-in Types &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Types &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -254,7 +254,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">The Python Standard Library</a> &#187;</li>
@@ -1850,7 +1850,7 @@ category.</p>
 <tr class="row-odd"><td colspan="4"><p><a class="reference internal" href="#str.swapcase" title="str.swapcase"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.swapcase()</span></code></a></p></td>
 <td colspan="4"><p><a class="reference internal" href="#bytes.swapcase" title="bytes.swapcase"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.swapcase()</span></code></a></p></td>
 </tr>
-<tr class="row-even"><td rowspan="5"><p>Padding and Stripping</p></td>
+<tr class="row-even"><td rowspan="7"><p>Padding and Stripping</p></td>
 <td colspan="2"><p><a class="reference internal" href="#str.ljust" title="str.ljust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.ljust()</span></code></a></p></td>
 <td colspan="2"><p><a class="reference internal" href="#str.rjust" title="str.rjust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.rjust()</span></code></a></p></td>
 <td colspan="2"><p><a class="reference internal" href="#bytes.ljust" title="bytes.ljust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.ljust()</span></code></a></p></td>
@@ -1869,6 +1869,12 @@ category.</p>
 <td><p><a class="reference internal" href="#str.rstrip" title="str.rstrip"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.rstrip()</span></code></a></p></td>
 <td colspan="3"><p><a class="reference internal" href="#bytes.lstrip" title="bytes.lstrip"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.lstrip()</span></code></a></p></td>
 <td><p><a class="reference internal" href="#bytes.rstrip" title="bytes.rstrip"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.rstrip()</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td colspan="4"><p><a class="reference internal" href="#str.removeprefix" title="str.removeprefix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.removeprefix()</span></code></a></p></td>
+<td colspan="4"><p><a class="reference internal" href="#bytes.removeprefix" title="bytes.removeprefix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.removeprefix()</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td colspan="4"><p><a class="reference internal" href="#str.removesuffix" title="str.removesuffix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.removesuffix()</span></code></a></p></td>
+<td colspan="4"><p><a class="reference internal" href="#bytes.removesuffix" title="bytes.removesuffix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.removesuffix()</span></code></a></p></td>
 </tr>
 <tr class="row-odd"><td rowspan="4"><p>Translation and Encoding</p></td>
 <td colspan="4"><p><a class="reference internal" href="#str.translate" title="str.translate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.translate()</span></code></a></p></td>
@@ -6106,6 +6112,13 @@ creation:</p>
 <span class="go">&lt;class &#39;list&#39;&gt;</span>
 </pre></div>
 </div>
+<p>Instances of <code class="docutils literal notranslate"><span class="pre">GenericAlias</span></code> are not classes at runtime, even though they behave like classes (they can be instantiated and subclassed):</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>This is true for <a class="reference internal" href="typing.html#user-defined-generics"><span class="std std-ref">user-defined generics</span></a> also.</p>
 <p>Calling <a class="reference internal" href="functions.html#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> or <a class="reference internal" href="#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> on a generic shows the parameterized type:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">repr</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span>
 <span class="go">&#39;list[int]&#39;</span>
@@ -6932,7 +6945,7 @@ element is the tuple to be formatted.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -6977,7 +6990,7 @@ element is the tuple to be formatted.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

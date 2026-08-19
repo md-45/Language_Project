@@ -16,28 +16,28 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>tkinter.messagebox — Tkinter message prompts &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tkinter.messagebox — Tkinter message prompts &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="copyright" title="Copyright" href="../copyright.html" />
-    <link rel="next" title="tkinter.scrolledtext — Scrolled Text Widget" href="tkinter.scrolledtext.html" />
-    <link rel="prev" title="Tkinter Dialogs" href="dialog.html" />
+    <link rel="next" title="tkinter.scrolledtext — Scrolled text widget" href="tkinter.scrolledtext.html" />
+    <link rel="prev" title="Tkinter dialogs" href="dialog.html" />
     
       
       <link rel="canonical" href="https://docs.python.org/3/library/tkinter.messagebox.html">
@@ -99,12 +99,12 @@
   <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="dialog.html"
-                          title="previous chapter">Tkinter Dialogs</a></p>
+                          title="previous chapter">Tkinter dialogs</a></p>
   </div>
   <div>
     <h4>Next topic</h4>
     <p class="topless"><a href="tkinter.scrolledtext.html"
-                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.scrolledtext</span></code> — Scrolled Text Widget</a></p>
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.scrolledtext</span></code> — Scrolled text widget</a></p>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -148,10 +148,10 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="tkinter.scrolledtext.html" title="tkinter.scrolledtext — Scrolled Text Widget"
+          <a href="tkinter.scrolledtext.html" title="tkinter.scrolledtext — Scrolled text widget"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="dialog.html" title="Tkinter Dialogs"
+          <a href="dialog.html" title="Tkinter dialogs"
              accesskey="P">previous</a> |</li>
 
           <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
@@ -164,7 +164,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -204,11 +204,12 @@
 <p><strong>Source code:</strong> <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.14/Lib/tkinter/messagebox.py">Lib/tkinter/messagebox.py</a></p>
 <hr class="docutils" />
 <p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.messagebox</span></code> module provides a template base class as well as
-a variety of convenience methods for commonly used configurations. The message
-boxes are modal and will return a subset of (<code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code>,
-<a class="reference internal" href="#tkinter.messagebox.OK" title="tkinter.messagebox.OK"><code class="xref py py-data docutils literal notranslate"><span class="pre">OK</span></code></a>, <a class="reference internal" href="#tkinter.messagebox.CANCEL" title="tkinter.messagebox.CANCEL"><code class="xref py py-data docutils literal notranslate"><span class="pre">CANCEL</span></code></a>, <a class="reference internal" href="#tkinter.messagebox.YES" title="tkinter.messagebox.YES"><code class="xref py py-data docutils literal notranslate"><span class="pre">YES</span></code></a>, <a class="reference internal" href="#tkinter.messagebox.NO" title="tkinter.messagebox.NO"><code class="xref py py-data docutils literal notranslate"><span class="pre">NO</span></code></a>) based on
-the user’s selection. Common message box styles and layouts include but are not
-limited to:</p>
+a variety of convenience methods for commonly used configurations.
+The message boxes are modal: each blocks until the user responds, then returns
+a value that depends on the function.
+The <code class="docutils literal notranslate"><span class="pre">show*</span></code> functions and <a class="reference internal" href="#tkinter.messagebox.Message.show" title="tkinter.messagebox.Message.show"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Message.show()</span></code></a> return the symbolic name of
+the button the user pressed, as a string (such as <a class="reference internal" href="#tkinter.messagebox.OK" title="tkinter.messagebox.OK"><code class="xref py py-data docutils literal notranslate"><span class="pre">OK</span></code></a> or <a class="reference internal" href="#tkinter.messagebox.YES" title="tkinter.messagebox.YES"><code class="xref py py-data docutils literal notranslate"><span class="pre">YES</span></code></a>).
+Common message box styles and layouts include but are not limited to:</p>
 <figure class="align-default">
 <img alt="../_images/tk_msg.png" src="../_images/tk_msg.png" />
 </figure>
@@ -256,6 +257,10 @@ to be displayed.</p>
 </dd>
 </dl>
 </div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tk 8.6 added the <em>command</em> option.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="tkinter.messagebox.Message.show">
 <span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tkinter.messagebox.Message.show" title="Link to this definition">¶</a></dt>
@@ -307,7 +312,7 @@ Returns <code class="docutils literal notranslate"><span class="pre">True</span>
 <dt class="sig sig-object py" id="tkinter.messagebox.askretrycancel">
 <span class="sig-prename descclassname"><span class="pre">tkinter.messagebox.</span></span><span class="sig-name descname"><span class="pre">askretrycancel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tkinter.messagebox.askretrycancel" title="Link to this definition">¶</a></dt>
 <dd><p>Ask if operation should be retried. Shows buttons <a class="reference internal" href="#tkinter.messagebox.RETRY" title="tkinter.messagebox.RETRY"><code class="xref py py-data docutils literal notranslate"><span class="pre">RETRY</span></code></a> and <a class="reference internal" href="#tkinter.messagebox.CANCEL" title="tkinter.messagebox.CANCEL"><code class="xref py py-data docutils literal notranslate"><span class="pre">CANCEL</span></code></a>.
-Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the answer is yes and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the answer is retry and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -436,12 +441,12 @@ otherwise.</p>
   <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="dialog.html"
-                          title="previous chapter">Tkinter Dialogs</a></p>
+                          title="previous chapter">Tkinter dialogs</a></p>
   </div>
   <div>
     <h4>Next topic</h4>
     <p class="topless"><a href="tkinter.scrolledtext.html"
-                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.scrolledtext</span></code> — Scrolled Text Widget</a></p>
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.scrolledtext</span></code> — Scrolled text widget</a></p>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -488,10 +493,10 @@ otherwise.</p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="tkinter.scrolledtext.html" title="tkinter.scrolledtext — Scrolled Text Widget"
+          <a href="tkinter.scrolledtext.html" title="tkinter.scrolledtext — Scrolled text widget"
              >next</a> |</li>
         <li class="right" >
-          <a href="dialog.html" title="Tkinter Dialogs"
+          <a href="dialog.html" title="Tkinter dialogs"
              >previous</a> |</li>
 
           <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
@@ -504,7 +509,7 @@ otherwise.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -550,7 +555,7 @@ otherwise.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

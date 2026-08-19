@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>What’s New In Python 3.4 &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What’s New In Python 3.4 &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -294,7 +294,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">What’s New in Python</a> &#187;</li>
@@ -994,7 +994,7 @@ for normal callables. The new descriptor also makes it easier to get
 arbitrary callables (including <code class="xref py py-func docutils literal notranslate"><span class="pre">partial()</span></code> instances)
 to behave like normal instance methods when included in a class definition.
 (Contributed by Alon Horev and Nick Coghlan in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=4331">bpo-4331</a>.)</p>
-<p id="whatsnew-singledispatch">The new <a class="reference internal" href="../library/functools.html#functools.singledispatch" title="functools.singledispatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">singledispatch()</span></code></a> decorator brings support for
+<p id="whatsnew-singledispatch">The new <a class="reference internal" href="../library/functools.html#functools.singledispatch" title="functools.singledispatch"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;~functools.singledispatch</span></code></a> decorator brings support for
 single-dispatch generic functions to the Python standard library. Where
 object oriented programming focuses on grouping multiple operations on a
 common set of data into a class, a generic function focuses on grouping
@@ -1007,7 +1007,7 @@ multiple implementations of an operation that allows it to work with
 </dd>
 </dl>
 </div>
-<p><a class="reference internal" href="../library/functools.html#functools.total_ordering" title="functools.total_ordering"><code class="xref py py-func docutils literal notranslate"><span class="pre">total_ordering()</span></code></a> now supports a return value of
+<p><a class="reference internal" href="../library/functools.html#functools.total_ordering" title="functools.total_ordering"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;~functools.total_ordering</span></code></a> now supports a return value of
 <a class="reference internal" href="../library/constants.html#NotImplemented" title="NotImplemented"><code class="xref py py-data docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> from the underlying comparison function.  (Contributed
 by Katie Miller in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=10042">bpo-10042</a>.)</p>
 <p>A pure-python version of the <a class="reference internal" href="../library/functools.html#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">partial()</span></code></a> function is now in the
@@ -1131,7 +1131,7 @@ Snow in <a class="reference external" href="https://bugs.python.org/issue?&#64;a
 information for modules, classes and functions.  (Contributed by Claudiu Popa
 and Nick Coghlan in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=18626">bpo-18626</a>.)</p>
 <p><a class="reference internal" href="../library/inspect.html#inspect.unwrap" title="inspect.unwrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">unwrap()</span></code></a> makes it easy to unravel wrapper function chains
-created by <a class="reference internal" href="../library/functools.html#functools.wraps" title="functools.wraps"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.wraps()</span></code></a> (and any other API that sets the
+created by <a class="reference internal" href="../library/functools.html#functools.wraps" title="functools.wraps"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;functools.wraps</span></code></a> (and any other API that sets the
 <code class="docutils literal notranslate"><span class="pre">__wrapped__</span></code> attribute on a wrapper function).  (Contributed by
 Daniel Urban, Aaron Iles and Nick Coghlan in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=13266">bpo-13266</a>.)</p>
 <p>As part of the implementation of the new <a class="reference internal" href="../library/enum.html#module-enum" title="enum: Implementation of an enumeration class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">enum</span></code></a> module, the
@@ -2160,7 +2160,7 @@ felt to be over-reaching/overloading of that meaning when the source code is
 found but improperly structured. If you were catching ImportError before and
 wish to continue to ignore syntax or decoding issues, catch all three
 exceptions now.</p></li>
-<li><p><a class="reference internal" href="../library/functools.html#functools.update_wrapper" title="functools.update_wrapper"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.update_wrapper()</span></code></a> and <a class="reference internal" href="../library/functools.html#functools.wraps" title="functools.wraps"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.wraps()</span></code></a> now correctly
+<li><p><a class="reference internal" href="../library/functools.html#functools.update_wrapper" title="functools.update_wrapper"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.update_wrapper()</span></code></a> and <a class="reference internal" href="../library/functools.html#functools.wraps" title="functools.wraps"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;functools.wraps</span></code></a> now correctly
 set the <code class="docutils literal notranslate"><span class="pre">__wrapped__</span></code> attribute to the function being wrapped, even if
 that function also had its <code class="docutils literal notranslate"><span class="pre">__wrapped__</span></code> attribute set. This means
 <code class="docutils literal notranslate"><span class="pre">__wrapped__</span></code> attributes now correctly link a stack of decorated
@@ -2566,7 +2566,7 @@ alternate context:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >What’s New in Python</a> &#187;</li>
@@ -2611,7 +2611,7 @@ alternate context:</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

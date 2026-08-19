@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>What’s new in Python 3.14 &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What’s new in Python 3.14 &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -341,7 +341,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">What’s New in Python</a> &#187;</li>
@@ -2788,17 +2788,6 @@ command-line interface has been deprecated since Python 3.13.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">load_module()</span></code> method: use <code class="docutils literal notranslate"><span class="pre">exec_module()</span></code> instead.</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../library/locale.html#module-locale" title="locale: Internationalization services."><code class="xref py py-class docutils literal notranslate"><span class="pre">locale</span></code></a>:</p>
-<ul>
-<li><p>The <a class="reference internal" href="../library/locale.html#locale.getdefaultlocale" title="locale.getdefaultlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">getdefaultlocale()</span></code></a> function
-has been deprecated since Python 3.11.
-Its removal was originally planned for Python 3.13 (<a class="reference external" href="https://github.com/python/cpython/issues/90817">gh-90817</a>),
-but has been postponed to Python 3.15.
-Use <a class="reference internal" href="../library/locale.html#locale.getlocale" title="locale.getlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">getlocale()</span></code></a>, <a class="reference internal" href="../library/locale.html#locale.setlocale" title="locale.setlocale"><code class="xref py py-func docutils literal notranslate"><span class="pre">setlocale()</span></code></a>,
-and <a class="reference internal" href="../library/locale.html#locale.getencoding" title="locale.getencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">getencoding()</span></code></a> instead.
-(Contributed by Hugo van Kemenade in <a class="reference external" href="https://github.com/python/cpython/issues/111187">gh-111187</a>.)</p></li>
-</ul>
-</li>
 <li><p><a class="reference internal" href="../library/pathlib.html#module-pathlib" title="pathlib: Object-oriented filesystem paths"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code></a>:</p>
 <ul>
 <li><p><a class="reference internal" href="../library/pathlib.html#pathlib.PurePath.is_reserved" title="pathlib.PurePath.is_reserved"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PurePath.is_reserved()</span></code></a>
@@ -2851,7 +2840,7 @@ passing <code class="docutils literal notranslate"><span class="pre">None</span>
 since Python 3.13.
 Use <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">TD(TypedDict):</span> <span class="pre">pass</span></code> or <code class="docutils literal notranslate"><span class="pre">TD</span> <span class="pre">=</span> <span class="pre">TypedDict(&quot;TD&quot;,</span> <span class="pre">{})</span></code>
 to create a TypedDict with zero field.</p></li>
-<li><p>The <a class="reference internal" href="../library/typing.html#typing.no_type_check_decorator" title="typing.no_type_check_decorator"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.no_type_check_decorator()</span></code></a> decorator function
+<li><p>The <a class="reference internal" href="../library/typing.html#typing.no_type_check_decorator" title="typing.no_type_check_decorator"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;typing.no_type_check_decorator</span></code></a> decorator function
 has been deprecated since Python 3.13.
 After eight years in the <a class="reference internal" href="../library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> module,
 it has yet to be supported by any major type checker.</p></li>
@@ -3901,6 +3890,15 @@ rather than collecting generation 1.</p></li>
 locale in some cases.
 This temporary change affects other threads.
 (Contributed by Serhiy Storchaka in <a class="reference external" href="https://github.com/python/cpython/issues/69998">gh-69998</a>.)</p></li>
+<li><p><a class="reference internal" href="../library/pickle.html#pickle.dump" title="pickle.dump"><code class="xref py py-func docutils literal notranslate"><span class="pre">pickle.dump()</span></code></a> and <a class="reference internal" href="../library/pickle.html#pickle.dumps" title="pickle.dumps"><code class="xref py py-func docutils literal notranslate"><span class="pre">pickle.dumps()</span></code></a> now raise
+<a class="reference internal" href="../library/pickle.html#pickle.PicklingError" title="pickle.PicklingError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PicklingError</span></code></a> for some failures that previously raised
+<a class="reference internal" href="../library/exceptions.html#AttributeError" title="AttributeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code></a>, <a class="reference internal" href="../library/exceptions.html#ImportError" title="ImportError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ImportError</span></code></a>, <a class="reference internal" href="../library/exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>,
+<a class="reference internal" href="../library/exceptions.html#UnicodeEncodeError" title="UnicodeEncodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnicodeEncodeError</span></code></a> or <code class="xref py py-exc docutils literal notranslate"><span class="pre">PicklingError</span></code>,
+depending on the implementation
+(for example, pickling a local object, or an object whose module cannot be imported).
+The original exception is chained to the <code class="xref py py-exc docutils literal notranslate"><span class="pre">PicklingError</span></code>.
+Code that caught these exceptions should also catch <code class="xref py py-exc docutils literal notranslate"><span class="pre">PicklingError</span></code>.
+(Contributed by Serhiy Storchaka in <a class="reference external" href="https://github.com/python/cpython/issues/122311">gh-122311</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/types.html#types.UnionType" title="types.UnionType"><code class="xref py py-class docutils literal notranslate"><span class="pre">types.UnionType</span></code></a> is now an alias for <a class="reference internal" href="../library/typing.html#typing.Union" title="typing.Union"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Union</span></code></a>,
 causing changes in some behaviors.
 See <a class="reference internal" href="#whatsnew314-typing-union"><span class="std std-ref">above</span></a> for more details.
@@ -4317,7 +4315,7 @@ See <a class="reference internal" href="#whatsnew314-incremental-gc"><span class
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >What’s New in Python</a> &#187;</li>
@@ -4362,7 +4360,7 @@ See <a class="reference internal" href="#whatsnew314-incremental-gc"><span class
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

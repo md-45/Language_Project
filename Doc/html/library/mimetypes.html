@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>mimetypes — Map filenames to MIME types &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mimetypes — Map filenames to MIME types &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -176,7 +176,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -250,7 +250,7 @@ additional non-standard but commonly used MIME types are also recognized.</p>
 <p><span class="versionmodified changed">Changed in version 3.8: </span>Added support for <em>url</em> being a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
 <div class="versionchanged soft-deprecated">
-<p><span class="versionmodified soft-deprecated"><a class="reference internal" href="../glossary.html#term-soft-deprecated">Soft deprecated</a> since version 3.13: </span>Passing a file path instead of URL is <span class="xref std std-term">soft deprecated</span>.
+<p><span class="versionmodified soft-deprecated"><a class="reference internal" href="../glossary.html#term-soft-deprecated">Soft deprecated</a> since version 3.13: </span>Passing a file path instead of URL.
 Use <a class="reference internal" href="#mimetypes.guess_file_type" title="mimetypes.guess_file_type"><code class="xref py py-func docutils literal notranslate"><span class="pre">guess_file_type()</span></code></a> for this.</p>
 </div>
 </dd></dl>
@@ -312,11 +312,12 @@ when called multiple times.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="mimetypes.read_mime_types">
-<span class="sig-prename descclassname"><span class="pre">mimetypes.</span></span><span class="sig-name descname"><span class="pre">read_mime_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mimetypes.read_mime_types" title="Link to this definition">¶</a></dt>
-<dd><p>Load the type map given in the file <em>filename</em>, if it exists.  The type map is
-returned as a dictionary mapping filename extensions, including the leading dot
-(<code class="docutils literal notranslate"><span class="pre">'.'</span></code>), to strings of the form <code class="docutils literal notranslate"><span class="pre">'type/subtype'</span></code>.  If the file <em>filename</em>
-does not exist or cannot be read, <code class="docutils literal notranslate"><span class="pre">None</span></code> is returned.</p>
+<span class="sig-prename descclassname"><span class="pre">mimetypes.</span></span><span class="sig-name descname"><span class="pre">read_mime_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mimetypes.read_mime_types" title="Link to this definition">¶</a></dt>
+<dd><p>Load the type map given in the file named by <em>file</em>, if it exists.  <em>file</em>
+must be a string specifying the name of the file to read.  The type map is
+returned as a dictionary mapping file extensions, including the leading dot
+(<code class="docutils literal notranslate"><span class="pre">'.'</span></code>), to strings of the form <code class="docutils literal notranslate"><span class="pre">'type/subtype'</span></code>.  If the file does not
+exist or cannot be read, <code class="docutils literal notranslate"><span class="pre">None</span></code> is returned.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -698,7 +699,7 @@ interface:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -744,7 +745,7 @@ interface:</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

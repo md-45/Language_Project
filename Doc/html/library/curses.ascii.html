@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>curses.ascii — Utilities for ASCII characters &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curses.ascii — Utilities for ASCII characters &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -164,7 +164,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -530,7 +530,7 @@ C library:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="curses.ascii.isblank">
 <span class="sig-prename descclassname"><span class="pre">curses.ascii.</span></span><span class="sig-name descname"><span class="pre">isblank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#curses.ascii.isblank" title="Link to this definition">¶</a></dt>
-<dd><p>Checks for an ASCII whitespace character; space or horizontal tab.</p>
+<dd><p>Checks for an ASCII blank character; space or horizontal tab.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -549,7 +549,7 @@ to <code class="docutils literal notranslate"><span class="pre">c</span> <span c
 <dl class="py function">
 <dt class="sig sig-object py" id="curses.ascii.isgraph">
 <span class="sig-prename descclassname"><span class="pre">curses.ascii.</span></span><span class="sig-name descname"><span class="pre">isgraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#curses.ascii.isgraph" title="Link to this definition">¶</a></dt>
-<dd><p>Checks for ASCII any printable character except space.</p>
+<dd><p>Checks for any ASCII printable character except space.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -567,7 +567,7 @@ to <code class="docutils literal notranslate"><span class="pre">c</span> <span c
 <dl class="py function">
 <dt class="sig sig-object py" id="curses.ascii.ispunct">
 <span class="sig-prename descclassname"><span class="pre">curses.ascii.</span></span><span class="sig-name descname"><span class="pre">ispunct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#curses.ascii.ispunct" title="Link to this definition">¶</a></dt>
-<dd><p>Checks for any printable ASCII character which is not a space or an alphanumeric
+<dd><p>Checks for any ASCII printable character which is not a space or an alphanumeric
 character.</p>
 </dd></dl>
 
@@ -594,7 +594,8 @@ feed, horizontal tab, vertical tab.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="curses.ascii.isctrl">
 <span class="sig-prename descclassname"><span class="pre">curses.ascii.</span></span><span class="sig-name descname"><span class="pre">isctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#curses.ascii.isctrl" title="Link to this definition">¶</a></dt>
-<dd><p>Checks for an ASCII control character (ordinal values 0 to 31).</p>
+<dd><p>Checks for an ASCII control character (ordinal values 0 to 31).  Unlike
+<a class="reference internal" href="#curses.ascii.iscntrl" title="curses.ascii.iscntrl"><code class="xref py py-func docutils literal notranslate"><span class="pre">iscntrl()</span></code></a>, this does not include the delete character (0x7f).</p>
 </dd></dl>
 
 <dl class="py function">
@@ -731,7 +732,7 @@ ASCII control characters from 0 (NUL) to 0x1f (US), in order, plus the mnemonic
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -777,7 +778,7 @@ ASCII control characters from 0 (NUL) to 0x1f (US), in order, plus the mnemonic
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

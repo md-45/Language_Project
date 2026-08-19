@@ -16,28 +16,28 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>Event loop &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event loop &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="next" title="Futures" href="asyncio-future.html" />
-    <link rel="prev" title="Call Graph Introspection" href="asyncio-graph.html" />
+    <link rel="prev" title="Command-line introspection tools" href="asyncio-tools.html" />
     
       
       <link rel="canonical" href="https://docs.python.org/3/library/asyncio-eventloop.html">
@@ -137,8 +137,8 @@
   </div>
   <div>
     <h4>Previous topic</h4>
-    <p class="topless"><a href="asyncio-graph.html"
-                          title="previous chapter">Call Graph Introspection</a></p>
+    <p class="topless"><a href="asyncio-tools.html"
+                          title="previous chapter">Command-line introspection tools</a></p>
   </div>
   <div>
     <h4>Next topic</h4>
@@ -190,7 +190,7 @@
           <a href="asyncio-future.html" title="Futures"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="asyncio-graph.html" title="Call Graph Introspection"
+          <a href="asyncio-tools.html" title="Command-line introspection tools"
              accesskey="P">previous</a> |</li>
 
           <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
@@ -203,7 +203,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -1275,12 +1275,19 @@ Asynchronous version of
 <dd><p>Connect <em>sock</em> to a remote socket at <em>address</em>.</p>
 <p>Asynchronous version of <a class="reference internal" href="socket.html#socket.socket.connect" title="socket.socket.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">socket.connect()</span></code></a>.</p>
 <p><em>sock</em> must be a non-blocking socket.</p>
+<p>With <a class="reference internal" href="#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a>, <em>address</em> does not need to be resolved:
+for <a class="reference internal" href="socket.html#socket.AF_INET" title="socket.AF_INET"><code class="xref py py-const docutils literal notranslate"><span class="pre">AF_INET</span></code></a> and <a class="reference internal" href="socket.html#socket.AF_INET6" title="socket.AF_INET6"><code class="xref py py-const docutils literal notranslate"><span class="pre">AF_INET6</span></code></a> sockets,
+<code class="docutils literal notranslate"><span class="pre">sock_connect</span></code> first checks whether <em>address</em> is already resolved by
+calling <a class="reference internal" href="socket.html#socket.inet_pton" title="socket.inet_pton"><code class="xref py py-func docutils literal notranslate"><span class="pre">socket.inet_pton()</span></code></a>, and uses <a class="reference internal" href="#asyncio.loop.getaddrinfo" title="asyncio.loop.getaddrinfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.getaddrinfo()</span></code></a> to
+resolve it if it is not.</p>
+<p><a class="reference internal" href="#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a>, the default event loop on Windows, does not
+resolve <em>address</em>.  The host must already be a numeric IP address; passing
+a host name raises <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>.  Resolve the address with
+<a class="reference internal" href="#asyncio.loop.getaddrinfo" title="asyncio.loop.getaddrinfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.getaddrinfo()</span></code></a> first, or use <a class="reference internal" href="#asyncio.loop.create_connection" title="asyncio.loop.create_connection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.create_connection()</span></code></a>,
+which resolves the address on every platform.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 3.5.2: </span><code class="docutils literal notranslate"><span class="pre">address</span></code> no longer needs to be resolved.  <code class="docutils literal notranslate"><span class="pre">sock_connect</span></code>
-will try to check if the <em>address</em> is already resolved by calling
-<a class="reference internal" href="socket.html#socket.inet_pton" title="socket.inet_pton"><code class="xref py py-func docutils literal notranslate"><span class="pre">socket.inet_pton()</span></code></a>.  If not,
-<a class="reference internal" href="#asyncio.loop.getaddrinfo" title="asyncio.loop.getaddrinfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.getaddrinfo()</span></code></a> will be used to resolve the
-<em>address</em>.</p>
+<p><span class="versionmodified changed">Changed in version 3.5.2: </span>With <a class="reference internal" href="#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a>, <code class="docutils literal notranslate"><span class="pre">address</span></code> no longer needs to be
+resolved.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1376,7 +1383,9 @@ both methods are coroutines.</p>
 <dd><p>Register the read end of <em>pipe</em> in the event loop.</p>
 <p><em>protocol_factory</em> must be a callable returning an
 <a class="reference internal" href="asyncio-protocol.html#asyncio-protocol"><span class="std std-ref">asyncio protocol</span></a> implementation.</p>
-<p><em>pipe</em> is a <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file-like object</span></a>.</p>
+<p><em>pipe</em> is a <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file-like object</span></a>.  See
+<a class="reference internal" href="#asyncio-pipe-objects"><span class="std std-ref">Supported pipe objects</span></a> for the objects
+supported as <em>pipe</em>.</p>
 <p>Return pair <code class="docutils literal notranslate"><span class="pre">(transport,</span> <span class="pre">protocol)</span></code>, where <em>transport</em> supports
 the <a class="reference internal" href="asyncio-protocol.html#asyncio.ReadTransport" title="asyncio.ReadTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReadTransport</span></code></a> interface and <em>protocol</em> is an object
 instantiated by the <em>protocol_factory</em>.</p>
@@ -1390,7 +1399,9 @@ non-blocking mode.</p>
 <dd><p>Register the write end of <em>pipe</em> in the event loop.</p>
 <p><em>protocol_factory</em> must be a callable returning an
 <a class="reference internal" href="asyncio-protocol.html#asyncio-protocol"><span class="std std-ref">asyncio protocol</span></a> implementation.</p>
-<p><em>pipe</em> is <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file-like object</span></a>.</p>
+<p><em>pipe</em> is a <a class="reference internal" href="../glossary.html#term-file-object"><span class="xref std std-term">file-like object</span></a>.  See
+<a class="reference internal" href="#asyncio-pipe-objects"><span class="std std-ref">Supported pipe objects</span></a> for the objects
+supported as <em>pipe</em>.</p>
 <p>Return pair <code class="docutils literal notranslate"><span class="pre">(transport,</span> <span class="pre">protocol)</span></code>, where <em>transport</em> supports
 <a class="reference internal" href="asyncio-protocol.html#asyncio.WriteTransport" title="asyncio.WriteTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">WriteTransport</span></code></a> interface and <em>protocol</em> is an object
 instantiated by the <em>protocol_factory</em>.</p>
@@ -1398,6 +1409,28 @@ instantiated by the <em>protocol_factory</em>.</p>
 non-blocking mode.</p>
 </dd></dl>
 
+<p class="rubric" id="asyncio-pipe-objects">Supported pipe objects</p>
+<p>These methods only work with objects the operating system can poll for
+readiness or perform overlapped I/O on.  Regular files on disk are <strong>not</strong>
+supported on any platform.  There is no asynchronous file I/O in asyncio;
+use <a class="reference internal" href="#asyncio.loop.run_in_executor" title="asyncio.loop.run_in_executor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.run_in_executor()</span></code></a> to read and write regular files without
+blocking the event loop.</p>
+<p>On Unix, with <a class="reference internal" href="#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a>, <em>pipe</em> must wrap one of the
+following:</p>
+<ul class="simple">
+<li><p>a pipe, such as an end of an <a class="reference internal" href="os.html#os.pipe" title="os.pipe"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.pipe()</span></code></a> pair or a FIFO created with
+<a class="reference internal" href="os.html#os.mkfifo" title="os.mkfifo"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.mkfifo()</span></code></a>;</p></li>
+<li><p>a socket;</p></li>
+<li><p>a character device, such as a terminal.</p></li>
+</ul>
+<p>On Windows, where only <a class="reference internal" href="#asyncio.ProactorEventLoop" title="asyncio.ProactorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProactorEventLoop</span></code></a> implements these methods,
+<em>pipe</em> must wrap a handle opened for overlapped I/O (that is, created with the
+<code class="docutils literal notranslate"><span class="pre">FILE_FLAG_OVERLAPPED</span></code> flag), since the handle has to be associated with an
+I/O completion port.  Handles that were not opened for overlapped I/O are
+rejected.  In particular, the standard streams (<a class="reference internal" href="sys.html#sys.stdin" title="sys.stdin"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stdin</span></code></a>,
+<a class="reference internal" href="sys.html#sys.stdout" title="sys.stdout"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stdout</span></code></a> and <a class="reference internal" href="sys.html#sys.stderr" title="sys.stderr"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a>), console handles, and the pipes
+created by <a class="reference internal" href="os.html#os.pipe" title="os.pipe"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.pipe()</span></code></a> are <strong>not</strong> opened for overlapped I/O and therefore
+cannot be used with these methods.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference internal" href="#asyncio.SelectorEventLoop" title="asyncio.SelectorEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectorEventLoop</span></code></a> does not support the above methods on
@@ -1956,6 +1989,12 @@ one <em>Server</em> object.</p>
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wait_closed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.Server.wait_closed" title="Link to this definition">¶</a></dt>
 <dd><p>Wait until the <a class="reference internal" href="#asyncio.Server.close" title="asyncio.Server.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> method completes and all active
 connections have finished.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.12: </span><code class="docutils literal notranslate"><span class="pre">wait_closed()</span></code> now waits until the server is closed and
+all active connections have finished.  Previously, it returned
+immediately if the server was already closed, even if
+connections were still active.</p>
+</div>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2240,8 +2279,8 @@ using the <a class="reference internal" href="#asyncio.loop.add_signal_handler" 
   </div>
   <div>
     <h4>Previous topic</h4>
-    <p class="topless"><a href="asyncio-graph.html"
-                          title="previous chapter">Call Graph Introspection</a></p>
+    <p class="topless"><a href="asyncio-tools.html"
+                          title="previous chapter">Command-line introspection tools</a></p>
   </div>
   <div>
     <h4>Next topic</h4>
@@ -2296,7 +2335,7 @@ using the <a class="reference internal" href="#asyncio.loop.add_signal_handler" 
           <a href="asyncio-future.html" title="Futures"
              >next</a> |</li>
         <li class="right" >
-          <a href="asyncio-graph.html" title="Call Graph Introspection"
+          <a href="asyncio-tools.html" title="Command-line introspection tools"
              >previous</a> |</li>
 
           <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
@@ -2309,7 +2348,7 @@ using the <a class="reference internal" href="#asyncio.loop.add_signal_handler" 
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -2356,7 +2395,7 @@ using the <a class="reference internal" href="#asyncio.loop.add_signal_handler" 
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

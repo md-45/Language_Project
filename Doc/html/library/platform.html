@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>platform — Access to underlying platform’s identifying data &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>platform — Access to underlying platform’s identifying data &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -182,7 +182,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -353,6 +353,8 @@ include the patchlevel (it defaults to <code class="docutils literal notranslate
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#platform.release" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the system’s release, e.g. <code class="docutils literal notranslate"><span class="pre">'2.2.0'</span></code> or <code class="docutils literal notranslate"><span class="pre">'NT'</span></code>. An empty string is
 returned if the value cannot be determined.</p>
+<p>On iOS and Android, this is the user-facing OS release. To obtain the
+Darwin or Linux kernel release, use <a class="reference internal" href="os.html#os.uname" title="os.uname"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.uname()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -378,8 +380,6 @@ where it would otherwise cause confusion.</p>
 <span class="sig-prename descclassname"><span class="pre">platform.</span></span><span class="sig-name descname"><span class="pre">version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#platform.version" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the system’s release version, e.g. <code class="docutils literal notranslate"><span class="pre">'#3</span> <span class="pre">on</span> <span class="pre">degas'</span></code>. An empty string is
 returned if the value cannot be determined.</p>
-<p>On iOS and Android, this is the user-facing OS version. To obtain the
-Darwin or Linux kernel version, use <a class="reference internal" href="os.html#os.uname" title="os.uname"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.uname()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -706,7 +706,7 @@ corresponding options.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -752,7 +752,7 @@ corresponding options.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

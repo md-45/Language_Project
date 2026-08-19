@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>abc — Abstract Base Classes &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abc — Abstract Base Classes &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -164,7 +164,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -352,15 +352,15 @@ available as a method of <code class="docutils literal notranslate"><span class=
 or is derived from it.  A class that has a metaclass derived from
 <code class="xref py py-class docutils literal notranslate"><span class="pre">ABCMeta</span></code> cannot be instantiated unless all of its abstract methods
 and properties are overridden.  The abstract methods can be called using any
-of the normal ‘super’ call mechanisms.  <code class="xref py py-func docutils literal notranslate"><span class="pre">abstractmethod()</span></code> may be used
+of the normal ‘super’ call mechanisms.  <code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code> may be used
 to declare abstract methods for properties and descriptors.</p>
 <p>Dynamically adding abstract methods to a class, or attempting to modify the
 abstraction status of a method or class once it is created, are only
 supported using the <a class="reference internal" href="#abc.update_abstractmethods" title="abc.update_abstractmethods"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_abstractmethods()</span></code></a> function.  The
-<code class="xref py py-func docutils literal notranslate"><span class="pre">abstractmethod()</span></code> only affects subclasses derived using regular
+<code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code> only affects subclasses derived using regular
 inheritance; “virtual subclasses” registered with the ABC’s
 <a class="reference internal" href="#abc.ABCMeta.register" title="abc.ABCMeta.register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register()</span></code></a> method are not affected.</p>
-<p>When <code class="xref py py-func docutils literal notranslate"><span class="pre">abstractmethod()</span></code> is applied in combination with other method
+<p>When <code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code> is applied in combination with other method
 descriptors, it should be applied as the innermost decorator, as shown in
 the following usage examples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
@@ -398,7 +398,7 @@ the following usage examples:</p>
 the descriptor must identify itself as abstract using
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">__isabstractmethod__</span></code>. In general, this attribute should be <code class="docutils literal notranslate"><span class="pre">True</span></code>
 if any of the methods used to compose the descriptor are abstract. For
-example, Python’s built-in <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-class docutils literal notranslate"><span class="pre">property</span></code></a> does the equivalent of:</p>
+example, Python’s built-in <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;property</span></code></a> does the equivalent of:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Descriptor</span><span class="p">:</span>
     <span class="o">...</span>
     <span class="nd">@property</span>
@@ -426,12 +426,12 @@ multiple-inheritance.</p>
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 3.3: </span>It is now possible to use <a class="reference internal" href="functions.html#classmethod" title="classmethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">classmethod</span></code></a> with
-<a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">abstractmethod()</span></code></a>, making this decorator redundant.</p>
+<p><span class="versionmodified deprecated">Deprecated since version 3.3: </span>It is now possible to use <a class="reference internal" href="functions.html#classmethod" title="classmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;classmethod</span></code></a> with
+<a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code></a>, making this decorator redundant.</p>
 </div>
-<p>A subclass of the built-in <a class="reference internal" href="functions.html#classmethod" title="classmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">classmethod()</span></code></a>, indicating an abstract
-classmethod. Otherwise it is similar to <a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">abstractmethod()</span></code></a>.</p>
-<p>This special case is deprecated, as the <a class="reference internal" href="functions.html#classmethod" title="classmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">classmethod()</span></code></a> decorator
+<p>A subclass of the built-in <a class="reference internal" href="functions.html#classmethod" title="classmethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">classmethod</span></code></a>, indicating an abstract
+classmethod. Otherwise it is similar to <a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code></a>.</p>
+<p>This special case is deprecated, as the <a class="reference internal" href="functions.html#classmethod" title="classmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;classmethod</span></code></a> decorator
 is now correctly identified as abstract when applied to an abstract
 method:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
@@ -450,12 +450,12 @@ method:</p>
 <p><span class="versionmodified added">Added in version 3.2.</span></p>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 3.3: </span>It is now possible to use <a class="reference internal" href="functions.html#staticmethod" title="staticmethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">staticmethod</span></code></a> with
-<a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">abstractmethod()</span></code></a>, making this decorator redundant.</p>
+<p><span class="versionmodified deprecated">Deprecated since version 3.3: </span>It is now possible to use <a class="reference internal" href="functions.html#staticmethod" title="staticmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code></a> with
+<a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code></a>, making this decorator redundant.</p>
 </div>
-<p>A subclass of the built-in <a class="reference internal" href="functions.html#staticmethod" title="staticmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">staticmethod()</span></code></a>, indicating an abstract
-staticmethod. Otherwise it is similar to <a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">abstractmethod()</span></code></a>.</p>
-<p>This special case is deprecated, as the <a class="reference internal" href="functions.html#staticmethod" title="staticmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">staticmethod()</span></code></a> decorator
+<p>A subclass of the built-in <a class="reference internal" href="functions.html#staticmethod" title="staticmethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">staticmethod</span></code></a>, indicating an abstract
+staticmethod. Otherwise it is similar to <a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code></a>.</p>
+<p>This special case is deprecated, as the <a class="reference internal" href="functions.html#staticmethod" title="staticmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code></a> decorator
 is now correctly identified as abstract when applied to an abstract
 method:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
@@ -471,13 +471,13 @@ method:</p>
 <dt class="sig sig-object py" id="abc.abstractproperty">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">abc.</span></span><span class="sig-name descname"><span class="pre">abstractproperty</span></span><a class="headerlink" href="#abc.abstractproperty" title="Link to this definition">¶</a></dt>
 <dd><div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 3.3: </span>It is now possible to use <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-class docutils literal notranslate"><span class="pre">property</span></code></a>, <a class="reference internal" href="functions.html#property.getter" title="property.getter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">property.getter()</span></code></a>,
-<a class="reference internal" href="functions.html#property.setter" title="property.setter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">property.setter()</span></code></a> and <a class="reference internal" href="functions.html#property.deleter" title="property.deleter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">property.deleter()</span></code></a> with
-<a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">abstractmethod()</span></code></a>, making this decorator redundant.</p>
+<p><span class="versionmodified deprecated">Deprecated since version 3.3: </span>It is now possible to use <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;property</span></code></a>, <a class="reference internal" href="functions.html#property.getter" title="property.getter"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;property.getter</span></code></a>,
+<a class="reference internal" href="functions.html#property.setter" title="property.setter"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;property.setter</span></code></a> and <a class="reference internal" href="functions.html#property.deleter" title="property.deleter"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;property.deleter</span></code></a> with
+<a class="reference internal" href="#abc.abstractmethod" title="abc.abstractmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code></a>, making this decorator redundant.</p>
 </div>
-<p>A subclass of the built-in <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-func docutils literal notranslate"><span class="pre">property()</span></code></a>, indicating an abstract
+<p>A subclass of the built-in <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-class docutils literal notranslate"><span class="pre">property</span></code></a>, indicating an abstract
 property.</p>
-<p>This special case is deprecated, as the <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-func docutils literal notranslate"><span class="pre">property()</span></code></a> decorator
+<p>This special case is deprecated, as the <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;property</span></code></a> decorator
 is now correctly identified as abstract when applied to an abstract
 method:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
@@ -631,7 +631,7 @@ concept is not the same as C++’s.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -677,7 +677,7 @@ concept is not the same as C++’s.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>Coroutines and tasks &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coroutines and tasks &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -191,7 +191,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -1137,6 +1137,8 @@ then it is equivalent to <a class="reference internal" href="#asyncio.ALL_COMPLE
 </table>
 <p>Unlike <a class="reference internal" href="#asyncio.wait_for" title="asyncio.wait_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">wait_for()</span></code></a>, <code class="docutils literal notranslate"><span class="pre">wait()</span></code> does not cancel the
 futures when a timeout occurs.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">wait()</span></code> is cancelled, the futures in <em>aws</em> are not cancelled
+and continue to run.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.10: </span>Removed the <em>loop</em> parameter.</p>
 </div>
@@ -1193,6 +1195,9 @@ This pattern is compatible with Python versions older than 3.13:</p>
 <p>A <a class="reference internal" href="exceptions.html#TimeoutError" title="TimeoutError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TimeoutError</span></code></a> is raised if the timeout occurs before all awaitables
 are done. This is raised by the <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code> loop during asynchronous
 iteration or by the coroutines yielded during plain iteration.</p>
+<p><code class="docutils literal notranslate"><span class="pre">as_completed()</span></code> does not cancel the tasks running the supplied
+awaitables: if a timeout occurs or the iteration is cancelled, the
+remaining tasks continue to run.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.10: </span>Removed the <em>loop</em> parameter.</p>
 </div>
@@ -1831,7 +1836,7 @@ used by end-user code.  See <a class="reference internal" href="#asyncio.Task.un
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -1878,7 +1883,7 @@ used by end-user code.  See <a class="reference internal" href="#asyncio.Task.un
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

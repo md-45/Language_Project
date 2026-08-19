@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>ctypes — A foreign function library for Python &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ctypes — A foreign function library for Python &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -212,7 +212,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -790,7 +790,7 @@ object with an <code class="xref py py-attr docutils literal notranslate"><span 
 </pre></div>
 </div>
 <p>If you don’t want to store the instance’s data in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">_as_parameter_</span></code>
-instance variable, you could define a <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-class docutils literal notranslate"><span class="pre">property</span></code></a> which makes the
+instance variable, you could define a <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;property</span></code></a> which makes the
 attribute available on request.</p>
 </section>
 <section id="specifying-the-required-argument-types-function-prototypes">
@@ -3357,8 +3357,9 @@ initialize the elements in order.</p>
 <dd><p>Create an array.
 Equivalent to <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">*</span> <span class="pre">length</span></code>, where <em>type</em> is a
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code> data type and <em>length</em> an integer.</p>
-<p>This function is <a class="reference internal" href="../glossary.html#term-soft-deprecated"><span class="xref std std-term">soft deprecated</span></a> in favor of multiplication.
-There are no plans to remove it.</p>
+<div class="versionchanged soft-deprecated">
+<p><span class="versionmodified soft-deprecated"><a class="reference internal" href="../glossary.html#term-soft-deprecated">Soft deprecated</a> since version 3.14: </span>In favor of multiplication.</p>
+</div>
 </dd></dl>
 
 <dl class="py class">
@@ -3564,7 +3565,7 @@ error.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -3610,7 +3611,7 @@ error.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

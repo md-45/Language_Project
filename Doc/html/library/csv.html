@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>csv — CSV File Reading and Writing &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csv — CSV File Reading and Writing &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -178,7 +178,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -275,6 +275,11 @@ option is specified (in which case unquoted fields are transformed into floats).
 <span class="go">Spam, Lovely Spam, Wonderful Spam</span>
 </pre></div>
 </div>
+<p>where <code class="file docutils literal notranslate"><span class="pre">eggs.csv</span></code> contains:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Spam Spam Spam Spam Spam |Baked Beans|
+Spam |Lovely Spam| |Wonderful Spam|
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -303,6 +308,11 @@ All other non-string data are stringified with <a class="reference internal" hre
                             <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_MINIMAL</span><span class="p">)</span>
     <span class="n">spamwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Spam&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Baked Beans&#39;</span><span class="p">])</span>
     <span class="n">spamwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Spam&#39;</span><span class="p">,</span> <span class="s1">&#39;Lovely Spam&#39;</span><span class="p">,</span> <span class="s1">&#39;Wonderful Spam&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>which writes <code class="file docutils literal notranslate"><span class="pre">eggs.csv</span></code> containing:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Spam Spam Spam Spam Spam |Baked Beans|
+Spam |Lovely Spam| |Wonderful Spam|
 </pre></div>
 </div>
 </dd></dl>
@@ -388,6 +398,12 @@ to <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <span class="go">{&#39;first_name&#39;: &#39;John&#39;, &#39;last_name&#39;: &#39;Cleese&#39;}</span>
 </pre></div>
 </div>
+<p>where <code class="file docutils literal notranslate"><span class="pre">names.csv</span></code> contains:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>first_name,last_name
+Eric,Idle
+John,Cleese
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py class">
@@ -420,6 +436,13 @@ of the <code class="xref py py-class docutils literal notranslate"><span class="
     <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Baked&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Beans&#39;</span><span class="p">})</span>
     <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Lovely&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Spam&#39;</span><span class="p">})</span>
     <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Wonderful&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Spam&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>which writes <code class="file docutils literal notranslate"><span class="pre">names.csv</span></code> containing:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>first_name,last_name
+Baked,Beans
+Lovely,Spam
+Wonderful,Spam
 </pre></div>
 </div>
 </dd></dl>
@@ -480,6 +503,11 @@ all fields.  It is registered with the dialect name <code class="docutils litera
 reflecting the parameters found.  If the optional <em>delimiters</em> parameter
 is given, it is interpreted as a string containing possible valid
 delimiter characters.</p>
+<p>If several delimiters fit the sample equally well —
+for example if both <code class="docutils literal notranslate"><span class="pre">','</span></code> and <code class="docutils literal notranslate"><span class="pre">';'</span></code> split every row consistently —
+the delimiters <code class="docutils literal notranslate"><span class="pre">','</span></code>, <code class="docutils literal notranslate"><span class="pre">'\t'</span></code>, <code class="docutils literal notranslate"><span class="pre">';'</span></code>, <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> and <code class="docutils literal notranslate"><span class="pre">':'</span></code>
+are preferred, in this order,
+no matter how many times each of them occurs.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -952,7 +980,7 @@ on write an extra <code class="docutils literal notranslate"><span class="pre">\
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -998,7 +1026,7 @@ on write an extra <code class="docutils literal notranslate"><span class="pre">\
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

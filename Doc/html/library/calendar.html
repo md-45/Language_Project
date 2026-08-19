@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>calendar — General calendar-related functions &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendar — General calendar-related functions &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -174,7 +174,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -605,7 +605,7 @@ not thread-safe.</p>
 <p>For simple text calendars this module provides the following functions.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="calendar.setfirstweekday">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">setfirstweekday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weekday</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.setfirstweekday" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">setfirstweekday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">firstweekday</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.setfirstweekday" title="Link to this definition">¶</a></dt>
 <dd><p>Sets the weekday (<code class="docutils literal notranslate"><span class="pre">0</span></code> is Monday, <code class="docutils literal notranslate"><span class="pre">6</span></code> is Sunday) to start each week. The
 values <a class="reference internal" href="#calendar.MONDAY" title="calendar.MONDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">MONDAY</span></code></a>, <a class="reference internal" href="#calendar.TUESDAY" title="calendar.TUESDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">TUESDAY</span></code></a>, <a class="reference internal" href="#calendar.WEDNESDAY" title="calendar.WEDNESDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">WEDNESDAY</span></code></a>, <a class="reference internal" href="#calendar.THURSDAY" title="calendar.THURSDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">THURSDAY</span></code></a>,
 <a class="reference internal" href="#calendar.FRIDAY" title="calendar.FRIDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">FRIDAY</span></code></a>, <a class="reference internal" href="#calendar.SATURDAY" title="calendar.SATURDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">SATURDAY</span></code></a>, and <a class="reference internal" href="#calendar.SUNDAY" title="calendar.SUNDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">SUNDAY</span></code></a> are provided for
@@ -645,8 +645,8 @@ where <em>y1</em> and <em>y2</em> are years.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="calendar.weekheader">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">weekheader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.weekheader" title="Link to this definition">¶</a></dt>
-<dd><p>Return a header containing abbreviated weekday names. <em>n</em> specifies the width in
+<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">weekheader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.weekheader" title="Link to this definition">¶</a></dt>
+<dd><p>Return a header containing abbreviated weekday names. <em>width</em> specifies the width in
 characters for one weekday.</p>
 </dd></dl>
 
@@ -680,13 +680,13 @@ of the <a class="reference internal" href="#calendar.TextCalendar" title="calend
 
 <dl class="py function">
 <dt class="sig sig-object py" id="calendar.prcal">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">prcal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.prcal" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">prcal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theyear</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.prcal" title="Link to this definition">¶</a></dt>
 <dd><p>Prints the calendar for an entire year as returned by  <a class="reference internal" href="#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-func docutils literal notranslate"><span class="pre">calendar()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="calendar.calendar">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">calendar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.calendar" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">calendar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theyear</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.calendar" title="Link to this definition">¶</a></dt>
 <dd><p>Returns a 3-column calendar for an entire year as a multi-line string using
 the <a class="reference internal" href="#calendar.TextCalendar.formatyear" title="calendar.TextCalendar.formatyear"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatyear()</span></code></a> of the <a class="reference internal" href="#calendar.TextCalendar" title="calendar.TextCalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextCalendar</span></code></a> class.</p>
 </dd></dl>
@@ -1115,7 +1115,7 @@ or an absolute HTTP or <code class="docutils literal notranslate"><span class="p
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -1161,7 +1161,7 @@ or an absolute HTTP or <code class="docutils literal notranslate"><span class="p
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

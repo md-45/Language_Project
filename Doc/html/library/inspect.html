@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>inspect — Inspect live objects &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inspect — Inspect live objects &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -183,7 +183,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -1003,17 +1003,16 @@ created by an <a class="reference internal" href="../glossary.html#term-asynchro
 <dt class="sig sig-object py" id="inspect.ismethoddescriptor">
 <span class="sig-prename descclassname"><span class="pre">inspect.</span></span><span class="sig-name descname"><span class="pre">ismethoddescriptor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#inspect.ismethoddescriptor" title="Link to this definition">¶</a></dt>
 <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the object is a method descriptor, but not if
-<a class="reference internal" href="#inspect.ismethod" title="inspect.ismethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">ismethod()</span></code></a>, <a class="reference internal" href="#inspect.isclass" title="inspect.isclass"><code class="xref py py-func docutils literal notranslate"><span class="pre">isclass()</span></code></a>, <a class="reference internal" href="#inspect.isfunction" title="inspect.isfunction"><code class="xref py py-func docutils literal notranslate"><span class="pre">isfunction()</span></code></a> or <a class="reference internal" href="#inspect.isbuiltin" title="inspect.isbuiltin"><code class="xref py py-func docutils literal notranslate"><span class="pre">isbuiltin()</span></code></a>
-are true.</p>
+<a class="reference internal" href="#inspect.isclass" title="inspect.isclass"><code class="xref py py-func docutils literal notranslate"><span class="pre">isclass()</span></code></a>, <a class="reference internal" href="#inspect.ismethod" title="inspect.ismethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">ismethod()</span></code></a> or <a class="reference internal" href="#inspect.isfunction" title="inspect.isfunction"><code class="xref py py-func docutils literal notranslate"><span class="pre">isfunction()</span></code></a> is true.</p>
 <p>This, for example, is true of <code class="docutils literal notranslate"><span class="pre">int.__add__</span></code>.  An object passing this test
 has a <a class="reference internal" href="../reference/datamodel.html#object.__get__" title="object.__get__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__get__()</span></code></a> method, but not a <a class="reference internal" href="../reference/datamodel.html#object.__set__" title="object.__set__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__set__()</span></code></a>
 method or a <a class="reference internal" href="../reference/datamodel.html#object.__delete__" title="object.__delete__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__delete__()</span></code></a> method.  Beyond that, the set of
 attributes varies.  A <a class="reference internal" href="stdtypes.html#definition.__name__" title="definition.__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> attribute is usually
 sensible, and <a class="reference internal" href="stdtypes.html#definition.__doc__" title="definition.__doc__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code></a> often is.</p>
-<p>Methods implemented via descriptors that also pass one of the other tests
-return <code class="docutils literal notranslate"><span class="pre">False</span></code> from the <code class="xref py py-func docutils literal notranslate"><span class="pre">ismethoddescriptor()</span></code> test, simply because the
-other tests promise more – you can, e.g., count on having the
-<a class="reference internal" href="../reference/datamodel.html#method.__func__" title="method.__func__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__func__</span></code></a> attribute (etc) when an object passes
+<p>Method descriptors that also pass any of the other tests (<code class="xref py py-func docutils literal notranslate"><span class="pre">isclass()</span></code>,
+<code class="xref py py-func docutils literal notranslate"><span class="pre">ismethod()</span></code> or <code class="xref py py-func docutils literal notranslate"><span class="pre">isfunction()</span></code>) make this function return <code class="docutils literal notranslate"><span class="pre">False</span></code>,
+simply because those other tests promise more – you can, for example, count
+on having the <a class="reference internal" href="../reference/datamodel.html#method.__func__" title="method.__func__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__func__</span></code></a> attribute when an object passes
 <a class="reference internal" href="#inspect.ismethod" title="inspect.ismethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">ismethod()</span></code></a>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.13: </span>This function no longer incorrectly reports objects with <a class="reference internal" href="../reference/datamodel.html#object.__get__" title="object.__get__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__get__()</span></code></a>
@@ -1025,14 +1024,25 @@ descriptors (such objects are data descriptors, not method descriptors).</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="inspect.isdatadescriptor">
 <span class="sig-prename descclassname"><span class="pre">inspect.</span></span><span class="sig-name descname"><span class="pre">isdatadescriptor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#inspect.isdatadescriptor" title="Link to this definition">¶</a></dt>
-<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the object is a data descriptor.</p>
-<p>Data descriptors have a <a class="reference internal" href="../reference/datamodel.html#object.__set__" title="object.__set__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__set__</span></code></a> or a <a class="reference internal" href="../reference/datamodel.html#object.__delete__" title="object.__delete__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__delete__</span></code></a> method.
-Examples are properties (defined in Python), getsets, and members.  The
-latter two are defined in C and there are more specific tests available for
-those types, which is robust across Python implementations.  Typically, data
-descriptors will also have <a class="reference internal" href="stdtypes.html#definition.__name__" title="definition.__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code> attributes
-(properties, getsets, and members have both of these attributes), but this is
-not guaranteed.</p>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the object is a data descriptor, but not if
+<a class="reference internal" href="#inspect.isclass" title="inspect.isclass"><code class="xref py py-func docutils literal notranslate"><span class="pre">isclass()</span></code></a>, <a class="reference internal" href="#inspect.ismethod" title="inspect.ismethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">ismethod()</span></code></a> or <a class="reference internal" href="#inspect.isfunction" title="inspect.isfunction"><code class="xref py py-func docutils literal notranslate"><span class="pre">isfunction()</span></code></a> is true.</p>
+<p>Data descriptors always have a <a class="reference internal" href="../reference/datamodel.html#object.__set__" title="object.__set__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__set__()</span></code></a> method and/or
+a <a class="reference internal" href="../reference/datamodel.html#object.__delete__" title="object.__delete__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__delete__()</span></code></a> method.  Optionally, they may also have a
+<a class="reference internal" href="../reference/datamodel.html#object.__get__" title="object.__get__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__get__()</span></code></a> method.</p>
+<p>Examples of data descriptors are <a class="reference internal" href="functions.html#property" title="property"><code class="xref py py-func docutils literal notranslate"><span class="pre">properties</span></code></a>, getsets and
+member descriptors.  Note that for the latter two (defined only in C extension
+modules), more specific tests are available: <a class="reference internal" href="#inspect.isgetsetdescriptor" title="inspect.isgetsetdescriptor"><code class="xref py py-func docutils literal notranslate"><span class="pre">isgetsetdescriptor()</span></code></a> and
+<a class="reference internal" href="#inspect.ismemberdescriptor" title="inspect.ismemberdescriptor"><code class="xref py py-func docutils literal notranslate"><span class="pre">ismemberdescriptor()</span></code></a>, respectively.</p>
+<p>While data descriptors may also have <a class="reference internal" href="stdtypes.html#definition.__name__" title="definition.__name__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__name__</span></code></a> and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">__doc__</span></code> attributes (as properties, getsets and member descriptors
+do), this is not necessarily the case in general.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.8: </span>This function now reports objects with only a <a class="reference internal" href="../reference/datamodel.html#object.__set__" title="object.__set__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__set__()</span></code></a> method
+as being data descriptors (the presence of <a class="reference internal" href="../reference/datamodel.html#object.__get__" title="object.__get__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__get__()</span></code></a> is no
+longer required for that).  Moreover, objects with <a class="reference internal" href="../reference/datamodel.html#object.__delete__" title="object.__delete__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__delete__()</span></code></a>,
+but not <code class="xref py py-meth docutils literal notranslate"><span class="pre">__set__()</span></code>, are now properly recognized as data
+descriptors as well, which was not the case previously.</p>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -2515,7 +2525,7 @@ appended a colon and the qualified name of the target object.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -2561,7 +2571,7 @@ appended a colon and the qualified name of the target object.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     
