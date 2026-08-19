@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>Glossary &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="_static/documentation_options.js?v=2f7d2144"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -164,7 +164,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="index.html">3.14.6 Documentation</a> &#187;
+      <a href="index.html">3.14.7 Documentation</a> &#187;
     </li>
 
         <li class="nav-item nav-item-this"><a href="">Glossary</a></li>
@@ -279,18 +279,21 @@ evaluated value is assigned to the local variable.</p>
 <a class="reference internal" href="reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a> statement by defining <a class="reference internal" href="reference/datamodel.html#object.__aenter__" title="object.__aenter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__aenter__()</span></code></a> and
 <a class="reference internal" href="reference/datamodel.html#object.__aexit__" title="object.__aexit__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__aexit__()</span></code></a> methods.  Introduced by <span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
 </dd>
-<dt id="term-asynchronous-generator">asynchronous generator<a class="headerlink" href="#term-asynchronous-generator" title="Link to this term">¶</a></dt><dd><p>A function which returns an <a class="reference internal" href="#term-asynchronous-generator-iterator"><span class="xref std std-term">asynchronous generator iterator</span></a>.  It
-looks like a coroutine function defined with <a class="reference internal" href="reference/compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a> except
-that it contains <a class="reference internal" href="reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> expressions for producing a series of
-values usable in an <a class="reference internal" href="reference/compound_stmts.html#async-for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code></a> loop.</p>
-<p>Usually refers to an asynchronous generator function, but may refer to an
-<em>asynchronous generator iterator</em> in some contexts.  In cases where the
-intended meaning isn’t clear, using the full terms avoids ambiguity.</p>
+<dt id="term-asynchronous-generator">asynchronous generator<a class="headerlink" href="#term-asynchronous-generator" title="Link to this term">¶</a></dt><dd><p>Informally used to mean either an <a class="reference internal" href="#term-asynchronous-generator-function"><span class="xref std std-term">asynchronous generator
+function</span></a> or an <a class="reference internal" href="#term-asynchronous-generator-iterator"><span class="xref std std-term">asynchronous generator iterator</span></a>, depending on
+context.  The formal terms <span class="xref std std-term">asynchronous generator function</span> and
+<span class="xref std std-term">asynchronous generator iterator</span> are uncommon in practice;
+“asynchronous generator” alone is almost always sufficient.</p>
+</dd>
+<dt id="term-asynchronous-generator-function">asynchronous generator function<a class="headerlink" href="#term-asynchronous-generator-function" title="Link to this term">¶</a></dt><dd><p>A function which returns an <a class="reference internal" href="#term-asynchronous-generator-iterator"><span class="xref std std-term">asynchronous generator iterator</span></a>.
+It looks like a coroutine function defined with <a class="reference internal" href="reference/compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a>
+except that it contains <a class="reference internal" href="reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> expressions for producing a
+series of values usable in an <a class="reference internal" href="reference/compound_stmts.html#async-for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code></a> loop.  See <span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0525/"><strong>PEP 525</strong></a>.</p>
 <p>An asynchronous generator function may contain <a class="reference internal" href="reference/expressions.html#await"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">await</span></code></a>
 expressions as well as <a class="reference internal" href="reference/compound_stmts.html#async-for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code></a>, and <a class="reference internal" href="reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a>
 statements.</p>
 </dd>
-<dt id="term-asynchronous-generator-iterator">asynchronous generator iterator<a class="headerlink" href="#term-asynchronous-generator-iterator" title="Link to this term">¶</a></dt><dd><p>An object created by an <a class="reference internal" href="#term-asynchronous-generator"><span class="xref std std-term">asynchronous generator</span></a> function.</p>
+<dt id="term-asynchronous-generator-iterator">asynchronous generator iterator<a class="headerlink" href="#term-asynchronous-generator-iterator" title="Link to this term">¶</a></dt><dd><p>An object created by an <a class="reference internal" href="#term-asynchronous-generator-function"><span class="xref std std-term">asynchronous generator function</span></a>.</p>
 <p>This is an <a class="reference internal" href="#term-asynchronous-iterator"><span class="xref std std-term">asynchronous iterator</span></a> which when called using the
 <a class="reference internal" href="reference/datamodel.html#object.__anext__" title="object.__anext__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__anext__()</span></code></a> method returns an awaitable object which will execute
 the body of the asynchronous generator function until the next
@@ -299,17 +302,17 @@ the body of the asynchronous generator function until the next
 execution state (including local variables and pending
 try-statements).  When the <em>asynchronous generator iterator</em> effectively
 resumes with another awaitable returned by <a class="reference internal" href="reference/datamodel.html#object.__anext__" title="object.__anext__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__anext__()</span></code></a>, it
-picks up where it left off.  See <span class="target" id="index-6"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a> and <span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0525/"><strong>PEP 525</strong></a>.</p>
+picks up where it left off.  See <span class="target" id="index-7"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a> and <span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0525/"><strong>PEP 525</strong></a>.</p>
 </dd>
 <dt id="term-asynchronous-iterable">asynchronous iterable<a class="headerlink" href="#term-asynchronous-iterable" title="Link to this term">¶</a></dt><dd><p>An object, that can be used in an <a class="reference internal" href="reference/compound_stmts.html#async-for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code></a> statement.
 Must return an <a class="reference internal" href="#term-asynchronous-iterator"><span class="xref std std-term">asynchronous iterator</span></a> from its
-<a class="reference internal" href="reference/datamodel.html#object.__aiter__" title="object.__aiter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__aiter__()</span></code></a> method.  Introduced by <span class="target" id="index-8"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
+<a class="reference internal" href="reference/datamodel.html#object.__aiter__" title="object.__aiter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__aiter__()</span></code></a> method.  Introduced by <span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
 </dd>
 <dt id="term-asynchronous-iterator">asynchronous iterator<a class="headerlink" href="#term-asynchronous-iterator" title="Link to this term">¶</a></dt><dd><p>An object that implements the <a class="reference internal" href="reference/datamodel.html#object.__aiter__" title="object.__aiter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__aiter__()</span></code></a> and <a class="reference internal" href="reference/datamodel.html#object.__anext__" title="object.__anext__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__anext__()</span></code></a>
 methods.  <code class="xref py py-meth docutils literal notranslate"><span class="pre">__anext__()</span></code> must return an <a class="reference internal" href="#term-awaitable"><span class="xref std std-term">awaitable</span></a> object.
 <a class="reference internal" href="reference/compound_stmts.html#async-for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code></a> resolves the awaitables returned by an asynchronous
 iterator’s <code class="xref py py-meth docutils literal notranslate"><span class="pre">__anext__()</span></code> method until it raises a
-<a class="reference internal" href="library/exceptions.html#StopAsyncIteration" title="StopAsyncIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopAsyncIteration</span></code></a> exception.  Introduced by <span class="target" id="index-9"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
+<a class="reference internal" href="library/exceptions.html#StopAsyncIteration" title="StopAsyncIteration"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopAsyncIteration</span></code></a> exception.  Introduced by <span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
 </dd>
 <dt id="term-atomic-operation">atomic operation<a class="headerlink" href="#term-atomic-operation" title="Link to this term">¶</a></dt><dd><p>An operation that appears to execute as a single, indivisible step: no
 other thread can observe it half-done, and its effects become visible all
@@ -347,7 +350,7 @@ and would instead need to be retrieved with <a class="reference internal" href="
 </dd>
 <dt id="term-awaitable">awaitable<a class="headerlink" href="#term-awaitable" title="Link to this term">¶</a></dt><dd><p>An object that can be used in an <a class="reference internal" href="reference/expressions.html#await"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">await</span></code></a> expression.  Can be
 a <a class="reference internal" href="#term-coroutine"><span class="xref std std-term">coroutine</span></a> or an object with an <a class="reference internal" href="reference/datamodel.html#object.__await__" title="object.__await__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__await__()</span></code></a> method.
-See also <span class="target" id="index-10"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
+See also <span class="target" id="index-11"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
 </dd>
 <dt id="term-BDFL">BDFL<a class="headerlink" href="#term-BDFL" title="Link to this term">¶</a></dt><dd><p>Benevolent Dictator For Life, a.k.a. <a class="reference external" href="https://gvanrossum.github.io/">Guido van Rossum</a>, Python’s creator.</p>
 </dd>
@@ -476,18 +479,18 @@ context</span></a>.</p></li>
 </ul>
 </dd>
 <dt id="term-context-management-protocol">context management protocol<a class="headerlink" href="#term-context-management-protocol" title="Link to this term">¶</a></dt><dd><p>The <a class="reference internal" href="reference/datamodel.html#object.__enter__" title="object.__enter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__enter__()</span></code></a> and <a class="reference internal" href="reference/datamodel.html#object.__exit__" title="object.__exit__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__exit__()</span></code></a> methods called
-by the <a class="reference internal" href="reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement.  See <span class="target" id="index-11"></span><a class="pep reference external" href="https://peps.python.org/pep-0343/"><strong>PEP 343</strong></a>.</p>
+by the <a class="reference internal" href="reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement.  See <span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-0343/"><strong>PEP 343</strong></a>.</p>
 </dd>
 <dt id="term-context-manager">context manager<a class="headerlink" href="#term-context-manager" title="Link to this term">¶</a></dt><dd><p>An object which implements the <a class="reference internal" href="#term-context-management-protocol"><span class="xref std std-term">context management protocol</span></a> and
 controls the environment seen in a <a class="reference internal" href="reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement.  See
-<span class="target" id="index-12"></span><a class="pep reference external" href="https://peps.python.org/pep-0343/"><strong>PEP 343</strong></a>.</p>
+<span class="target" id="index-13"></span><a class="pep reference external" href="https://peps.python.org/pep-0343/"><strong>PEP 343</strong></a>.</p>
 </dd>
 <dt id="term-context-variable">context variable<a class="headerlink" href="#term-context-variable" title="Link to this term">¶</a></dt><dd><p>A variable whose value depends on which context is the <a class="reference internal" href="#term-current-context"><span class="xref std std-term">current
 context</span></a>.  Values are accessed via <a class="reference internal" href="library/contextvars.html#contextvars.ContextVar" title="contextvars.ContextVar"><code class="xref py py-class docutils literal notranslate"><span class="pre">contextvars.ContextVar</span></code></a>
 objects.  Context variables are primarily used to isolate state between
 concurrent asynchronous tasks.</p>
 </dd>
-<dt id="term-contiguous">contiguous<a class="headerlink" href="#term-contiguous" title="Link to this term">¶</a></dt><dd><p id="index-13">A buffer is considered contiguous exactly if it is either
+<dt id="term-contiguous">contiguous<a class="headerlink" href="#term-contiguous" title="Link to this term">¶</a></dt><dd><p id="index-14">A buffer is considered contiguous exactly if it is either
 <em>C-contiguous</em> or <em>Fortran contiguous</em>.  Zero-dimensional buffers are
 C and Fortran contiguous.  In one-dimensional arrays, the items
 must be laid out in memory next to each other, in order of
@@ -500,13 +503,13 @@ Fortran contiguous arrays, the first index varies the fastest.</p>
 entered at one point and exited at another point.  Coroutines can be
 entered, exited, and resumed at many different points.  They can be
 implemented with the <a class="reference internal" href="reference/compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a> statement.  See also
-<span class="target" id="index-14"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
+<span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
 </dd>
 <dt id="term-coroutine-function">coroutine function<a class="headerlink" href="#term-coroutine-function" title="Link to this term">¶</a></dt><dd><p>A function which returns a <a class="reference internal" href="#term-coroutine"><span class="xref std std-term">coroutine</span></a> object.  A coroutine
 function may be defined with the <a class="reference internal" href="reference/compound_stmts.html#async-def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span></code></a> statement,
 and may contain <a class="reference internal" href="reference/expressions.html#await"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">await</span></code></a>, <a class="reference internal" href="reference/compound_stmts.html#async-for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code></a>, and
 <a class="reference internal" href="reference/compound_stmts.html#async-with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code></a> keywords.  These were introduced
-by <span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
+by <span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>.</p>
 </dd>
 <dt id="term-CPython">CPython<a class="headerlink" href="#term-CPython" title="Link to this term">¶</a></dt><dd><p>The canonical implementation of the Python programming language, as
 distributed on <a class="reference external" href="https://www.python.org">python.org</a>.  The term “CPython”
@@ -546,7 +549,7 @@ multiple <a class="reference internal" href="#term-lock"><span class="xref std s
 </dd>
 <dt id="term-decorator">decorator<a class="headerlink" href="#term-decorator" title="Link to this term">¶</a></dt><dd><p>A function returning another function, usually applied as a function
 transformation using the <code class="docutils literal notranslate"><span class="pre">&#64;wrapper</span></code> syntax.  Common examples for
-decorators are <a class="reference internal" href="library/functions.html#classmethod" title="classmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">classmethod()</span></code></a> and <a class="reference internal" href="library/functions.html#staticmethod" title="staticmethod"><code class="xref py py-func docutils literal notranslate"><span class="pre">staticmethod()</span></code></a>.</p>
+decorators are <a class="reference internal" href="library/functions.html#classmethod" title="classmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;classmethod</span></code></a> and <a class="reference internal" href="library/functions.html#staticmethod" title="staticmethod"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code></a>.</p>
 <p>The decorator syntax is merely syntactic sugar, the following two
 function definitions are semantically equivalent:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
@@ -637,7 +640,7 @@ core and with user code.</p>
 </dd>
 <dt id="term-f-string">f-string<a class="headerlink" href="#term-f-string" title="Link to this term">¶</a></dt><dt id="term-f-strings">f-strings<a class="headerlink" href="#term-f-strings" title="Link to this term">¶</a></dt><dd><p>String literals prefixed with <code class="docutils literal notranslate"><span class="pre">f</span></code> or <code class="docutils literal notranslate"><span class="pre">F</span></code> are commonly called
 “f-strings” which is short for
-<a class="reference internal" href="reference/lexical_analysis.html#f-strings"><span class="std std-ref">formatted string literals</span></a>.  See also <span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0498/"><strong>PEP 498</strong></a>.</p>
+<a class="reference internal" href="reference/lexical_analysis.html#f-strings"><span class="std std-ref">formatted string literals</span></a>.  See also <span class="target" id="index-17"></span><a class="pep reference external" href="https://peps.python.org/pep-0498/"><strong>PEP 498</strong></a>.</p>
 </dd>
 <dt id="term-file-object">file object<a class="headerlink" href="#term-file-object" title="Link to this term">¶</a></dt><dd><p>An object exposing a file-oriented API (with methods such as
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code>) to an underlying resource.  Depending
@@ -678,12 +681,12 @@ entry finders</span></a> for use with <a class="reference internal" href="librar
 division operator is <code class="docutils literal notranslate"><span class="pre">//</span></code>.  For example, the expression <code class="docutils literal notranslate"><span class="pre">11</span> <span class="pre">//</span> <span class="pre">4</span></code>
 evaluates to <code class="docutils literal notranslate"><span class="pre">2</span></code> in contrast to the <code class="docutils literal notranslate"><span class="pre">2.75</span></code> returned by float true
 division.  Note that <code class="docutils literal notranslate"><span class="pre">(-11)</span> <span class="pre">//</span> <span class="pre">4</span></code> is <code class="docutils literal notranslate"><span class="pre">-3</span></code> because that is <code class="docutils literal notranslate"><span class="pre">-2.75</span></code>
-rounded <em>downward</em>. See <span class="target" id="index-17"></span><a class="pep reference external" href="https://peps.python.org/pep-0238/"><strong>PEP 238</strong></a>.</p>
+rounded <em>downward</em>. See <span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0238/"><strong>PEP 238</strong></a>.</p>
 </dd>
 <dt id="term-free-threading">free threading<a class="headerlink" href="#term-free-threading" title="Link to this term">¶</a></dt><dd><p>A threading model where multiple threads can run Python bytecode
 simultaneously within the same interpreter.  This is in contrast to
 the <a class="reference internal" href="#term-global-interpreter-lock"><span class="xref std std-term">global interpreter lock</span></a> which allows only one thread to
-execute Python bytecode at a time.  See <span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0703/"><strong>PEP 703</strong></a>.</p>
+execute Python bytecode at a time.  See <span class="target" id="index-19"></span><a class="pep reference external" href="https://peps.python.org/pep-0703/"><strong>PEP 703</strong></a>.</p>
 </dd>
 <dt id="term-free-threaded-build">free-threaded build<a class="headerlink" href="#term-free-threaded-build" title="Link to this term">¶</a></dt><dd><p>A build of <a class="reference internal" href="#term-CPython"><span class="xref std std-term">CPython</span></a> that supports <a class="reference internal" href="#term-free-threading"><span class="xref std std-term">free threading</span></a>,
 configured using the <a class="reference internal" href="using/configure.html#cmdoption-disable-gil"><code class="xref std std-option docutils literal notranslate"><span class="pre">--disable-gil</span></code></a> option before compilation.</p>
@@ -710,7 +713,7 @@ return value:</p>
 </pre></div>
 </div>
 <p>Function annotation syntax is explained in section <a class="reference internal" href="reference/compound_stmts.html#function"><span class="std std-ref">Function definitions</span></a>.</p>
-<p>See <a class="reference internal" href="#term-variable-annotation"><span class="xref std std-term">variable annotation</span></a> and <span class="target" id="index-19"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>,
+<p>See <a class="reference internal" href="#term-variable-annotation"><span class="xref std std-term">variable annotation</span></a> and <span class="target" id="index-20"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>,
 which describe this functionality.
 Also see <a class="reference internal" href="howto/annotations.html#annotations-howto"><span class="std std-ref">Annotations Best Practices</span></a>
 for best practices on working with annotations.</p>
@@ -733,20 +736,27 @@ performs garbage collection via reference counting and a cyclic garbage
 collector that is able to detect and break reference cycles.  The
 garbage collector can be controlled using the <a class="reference internal" href="library/gc.html#module-gc" title="gc: Interface to the cycle-detecting garbage collector."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gc</span></code></a> module.</p>
 </dd>
-<dt id="term-generator">generator<a class="headerlink" href="#term-generator" title="Link to this term">¶</a></dt><dd><p>A function which returns a <a class="reference internal" href="#term-generator-iterator"><span class="xref std std-term">generator iterator</span></a>.  It looks like a
-normal function except that it contains <a class="reference internal" href="reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> expressions
-for producing a series of values usable in a for-loop or that can be
-retrieved one at a time with the <a class="reference internal" href="library/functions.html#next" title="next"><code class="xref py py-func docutils literal notranslate"><span class="pre">next()</span></code></a> function.</p>
-<p>Usually refers to a generator function, but may refer to a
-<em>generator iterator</em> in some contexts.  In cases where the intended
-meaning isn’t clear, using the full terms avoids ambiguity.</p>
+<dt id="term-generator">generator<a class="headerlink" href="#term-generator" title="Link to this term">¶</a></dt><dd><p>Informally used to mean either a <a class="reference internal" href="#term-generator-function"><span class="xref std std-term">generator function</span></a> or a
+<a class="reference internal" href="#term-generator-iterator"><span class="xref std std-term">generator iterator</span></a>, depending on context.  The formal terms
+<span class="xref std std-term">generator function</span> and <span class="xref std std-term">generator iterator</span> are uncommon
+in practice; “generator” alone is almost always sufficient.</p>
 </dd>
-<dt id="term-generator-iterator">generator iterator<a class="headerlink" href="#term-generator-iterator" title="Link to this term">¶</a></dt><dd><p>An object created by a <a class="reference internal" href="#term-generator"><span class="xref std std-term">generator</span></a> function.</p>
+<dt id="term-generator-function">generator function<a class="headerlink" href="#term-generator-function" title="Link to this term">¶</a></dt><dd><p>A function which returns a <a class="reference internal" href="#term-generator"><span class="xref std std-term">generator</span></a> object.  It looks like a
+normal function except that it contains <a class="reference internal" href="reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> expressions
+for producing a series of values usable in a <a class="reference internal" href="reference/compound_stmts.html#for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code></a>-loop or
+that can be retrieved one at a time with the <a class="reference internal" href="library/functions.html#next" title="next"><code class="xref py py-func docutils literal notranslate"><span class="pre">next()</span></code></a> function.
+See <a class="reference internal" href="reference/expressions.html#yieldexpr"><span class="std std-ref">Yield expressions</span></a>.</p>
+</dd>
+<dt id="term-generator-iterator">generator iterator<a class="headerlink" href="#term-generator-iterator" title="Link to this term">¶</a></dt><dd><p>An object created by a <a class="reference internal" href="#term-generator-function"><span class="xref std std-term">generator function</span></a> or a
+<a class="reference internal" href="#term-generator-expression"><span class="xref std std-term">generator expression</span></a>.</p>
 <p>Each <a class="reference internal" href="reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> temporarily suspends processing, remembering the
-execution state (including local variables and pending
-try-statements).  When the <em>generator iterator</em> resumes, it picks up where
-it left off (in contrast to functions which start fresh on every
-invocation).</p>
+execution state (including local variables and pending try-statements).
+When the <em>generator iterator</em> resumes, it picks up where it left off
+(in contrast to functions which start fresh on every invocation).</p>
+<p>Generator iterators also implement the <a class="reference internal" href="reference/expressions.html#generator.send" title="generator.send"><code class="xref py py-meth docutils literal notranslate"><span class="pre">send()</span></code></a> method
+to send a value into the suspended generator, and the
+<a class="reference internal" href="reference/expressions.html#generator.throw" title="generator.throw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">throw()</span></code></a> method to raise an exception at the point
+where the generator was paused.  See <a class="reference internal" href="reference/expressions.html#generator-methods"><span class="std std-ref">Generator-iterator methods</span></a>.</p>
 </dd>
 <dt id="term-generator-expression">generator expression<a class="headerlink" href="#term-generator-expression" title="Link to this term">¶</a></dt><dd><p>An <a class="reference internal" href="#term-expression"><span class="xref std std-term">expression</span></a> that returns an <a class="reference internal" href="#term-iterator"><span class="xref std std-term">iterator</span></a>.  It looks like a normal expression
 followed by a <code class="xref std std-keyword docutils literal notranslate"><span class="pre">for</span></code> clause defining a loop variable, range,
@@ -761,14 +771,14 @@ generates values for an enclosing function:</p>
 for different types. Which implementation should be used during a call is
 determined by the dispatch algorithm.</p>
 <p>See also the <a class="reference internal" href="#term-single-dispatch"><span class="xref std std-term">single dispatch</span></a> glossary entry, the
-<a class="reference internal" href="library/functools.html#functools.singledispatch" title="functools.singledispatch"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.singledispatch()</span></code></a> decorator, and <span class="target" id="index-22"></span><a class="pep reference external" href="https://peps.python.org/pep-0443/"><strong>PEP 443</strong></a>.</p>
+<a class="reference internal" href="library/functools.html#functools.singledispatch" title="functools.singledispatch"><code class="xref py py-deco docutils literal notranslate"><span class="pre">&#64;functools.singledispatch</span></code></a> decorator, and <span class="target" id="index-24"></span><a class="pep reference external" href="https://peps.python.org/pep-0443/"><strong>PEP 443</strong></a>.</p>
 </dd>
 <dt id="term-generic-type">generic type<a class="headerlink" href="#term-generic-type" title="Link to this term">¶</a></dt><dd><p>A <a class="reference internal" href="#term-type"><span class="xref std std-term">type</span></a> that can be parameterized; typically a
 <a class="reference internal" href="reference/datamodel.html#sequence-types"><span class="std std-ref">container class</span></a> such as <a class="reference internal" href="library/stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> or
 <a class="reference internal" href="library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>. Used for <a class="reference internal" href="#term-type-hint"><span class="xref std std-term">type hints</span></a> and
 <a class="reference internal" href="#term-annotation"><span class="xref std std-term">annotations</span></a>.</p>
 <p>For more details, see <a class="reference internal" href="library/stdtypes.html#types-genericalias"><span class="std std-ref">generic alias types</span></a>,
-<span class="target" id="index-23"></span><a class="pep reference external" href="https://peps.python.org/pep-0483/"><strong>PEP 483</strong></a>, <span class="target" id="index-24"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>, <span class="target" id="index-25"></span><a class="pep reference external" href="https://peps.python.org/pep-0585/"><strong>PEP 585</strong></a>, and the <a class="reference internal" href="library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> module.</p>
+<span class="target" id="index-25"></span><a class="pep reference external" href="https://peps.python.org/pep-0483/"><strong>PEP 483</strong></a>, <span class="target" id="index-26"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>, <span class="target" id="index-27"></span><a class="pep reference external" href="https://peps.python.org/pep-0585/"><strong>PEP 585</strong></a>, and the <a class="reference internal" href="library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> module.</p>
 </dd>
 <dt id="term-GIL">GIL<a class="headerlink" href="#term-GIL" title="Link to this term">¶</a></dt><dd><p>See <a class="reference internal" href="#term-global-interpreter-lock"><span class="xref std std-term">global interpreter lock</span></a>.</p>
 </dd>
@@ -786,10 +796,10 @@ tasks such as compression or hashing.  Also, the GIL is always released
 when doing I/O.</p>
 <p>As of Python 3.13, the GIL can be disabled using the <a class="reference internal" href="using/configure.html#cmdoption-disable-gil"><code class="xref std std-option docutils literal notranslate"><span class="pre">--disable-gil</span></code></a>
 build configuration. After building Python with this option, code must be
-run with <a class="reference internal" href="using/cmdline.html#cmdoption-X"><code class="xref std std-option docutils literal notranslate"><span class="pre">-X</span> <span class="pre">gil=0</span></code></a> or after setting the <span class="target" id="index-26"></span><a class="reference internal" href="using/cmdline.html#envvar-PYTHON_GIL"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHON_GIL=0</span></code></a>
+run with <a class="reference internal" href="using/cmdline.html#cmdoption-X"><code class="xref std std-option docutils literal notranslate"><span class="pre">-X</span> <span class="pre">gil=0</span></code></a> or after setting the <span class="target" id="index-28"></span><a class="reference internal" href="using/cmdline.html#envvar-PYTHON_GIL"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHON_GIL=0</span></code></a>
 environment variable. This feature enables improved performance for
 multi-threaded applications and makes it easier to use multi-core CPUs
-efficiently. For more details, see <span class="target" id="index-27"></span><a class="pep reference external" href="https://peps.python.org/pep-0703/"><strong>PEP 703</strong></a>.</p>
+efficiently. For more details, see <span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0703/"><strong>PEP 703</strong></a>.</p>
 <p>In prior versions of Python’s C API, a function might declare that it
 requires the GIL to be held in order to use it. This refers to having an
 <a class="reference internal" href="#term-attached-thread-state"><span class="xref std std-term">attached thread state</span></a>.</p>
@@ -824,7 +834,7 @@ from their <a class="reference internal" href="library/functions.html#id" title=
 which ships with the standard distribution of Python.</p>
 </dd>
 <dt id="term-immortal">immortal<a class="headerlink" href="#term-immortal" title="Link to this term">¶</a></dt><dd><p><em>Immortal objects</em> are a CPython implementation detail introduced
-in <span class="target" id="index-28"></span><a class="pep reference external" href="https://peps.python.org/pep-0683/"><strong>PEP 683</strong></a>.</p>
+in <span class="target" id="index-30"></span><a class="pep reference external" href="https://peps.python.org/pep-0683/"><strong>PEP 683</strong></a>.</p>
 <p>If an object is immortal, its <a class="reference internal" href="#term-reference-count"><span class="xref std std-term">reference count</span></a> is never modified,
 and therefore it is never deallocated while the interpreter is running.
 For example, <a class="reference internal" href="library/constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> and <a class="reference internal" href="library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a> are immortal in CPython.</p>
@@ -1006,7 +1016,7 @@ See also:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="reference/import.html#finders-and-loaders"><span class="std std-ref">Finders and loaders</span></a></p></li>
 <li><p><a class="reference internal" href="library/importlib.html#importlib.abc.Loader" title="importlib.abc.Loader"><code class="xref py py-class docutils literal notranslate"><span class="pre">importlib.abc.Loader</span></code></a></p></li>
-<li><p><span class="target" id="index-29"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a></p></li>
+<li><p><span class="target" id="index-31"></span><a class="pep reference external" href="https://peps.python.org/pep-0302/"><strong>PEP 302</strong></a></p></li>
 </ul>
 </dd>
 <dt id="term-locale-encoding">locale encoding<a class="headerlink" href="#term-locale-encoding" title="Link to this term">¶</a></dt><dd><p>On Unix, it is the encoding of the LC_CTYPE locale. It can be set with
@@ -1016,7 +1026,7 @@ See also:</p>
 <p><a class="reference internal" href="library/locale.html#locale.getencoding" title="locale.getencoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">locale.getencoding()</span></code></a> can be used to get the locale encoding.</p>
 <p>See also the <a class="reference internal" href="#term-filesystem-encoding-and-error-handler"><span class="xref std std-term">filesystem encoding and error handler</span></a>.</p>
 </dd>
-<dt id="term-magic-method">magic method<a class="headerlink" href="#term-magic-method" title="Link to this term">¶</a></dt><dd><p id="index-30">An informal synonym for <a class="reference internal" href="#term-special-method"><span class="xref std std-term">special method</span></a>.</p>
+<dt id="term-magic-method">magic method<a class="headerlink" href="#term-magic-method" title="Link to this term">¶</a></dt><dd><p id="index-32">An informal synonym for <a class="reference internal" href="#term-special-method"><span class="xref std std-term">special method</span></a>.</p>
 </dd>
 <dt id="term-mapping">mapping<a class="headerlink" href="#term-mapping" title="Link to this term">¶</a></dt><dd><p>A container object that supports arbitrary key lookups and implements the
 methods specified in the <a class="reference internal" href="library/collections.abc.html#collections.abc.Mapping" title="collections.abc.Mapping"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Mapping</span></code></a> or
@@ -1107,7 +1117,7 @@ and specifically are not like a <a class="reference internal" href="#term-regula
 have no <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file.</p>
 <p>Namespace packages allow several individually installable packages to have a common parent package.
 Otherwise, it is recommended to use a <a class="reference internal" href="#term-regular-package"><span class="xref std std-term">regular package</span></a>.</p>
-<p>For more information, see <span class="target" id="index-31"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a> and <a class="reference internal" href="reference/import.html#reference-namespace-package"><span class="std std-ref">Namespace packages</span></a>.</p>
+<p>For more information, see <span class="target" id="index-33"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a> and <a class="reference internal" href="reference/import.html#reference-namespace-package"><span class="std std-ref">Namespace packages</span></a>.</p>
 <p>See also <a class="reference internal" href="#term-module"><span class="xref std std-term">module</span></a>.</p>
 </dd>
 <dt id="term-native-code">native code<a class="headerlink" href="#term-native-code" title="Link to this term">¶</a></dt><dd><p>Code that is compiled to machine instructions and runs directly on the
@@ -1222,7 +1232,7 @@ above.</p></li>
 default values for some optional arguments.</p>
 <p>See also the <a class="reference internal" href="#term-argument"><span class="xref std std-term">argument</span></a> glossary entry, the FAQ question on
 <a class="reference internal" href="faq/programming.html#faq-argument-vs-parameter"><span class="std std-ref">the difference between arguments and parameters</span></a>, the <a class="reference internal" href="library/inspect.html#inspect.Parameter" title="inspect.Parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">inspect.Parameter</span></code></a> class, the
-<a class="reference internal" href="reference/compound_stmts.html#function"><span class="std std-ref">Function definitions</span></a> section, and <span class="target" id="index-32"></span><a class="pep reference external" href="https://peps.python.org/pep-0362/"><strong>PEP 362</strong></a>.</p>
+<a class="reference internal" href="reference/compound_stmts.html#function"><span class="std std-ref">Function definitions</span></a> section, and <span class="target" id="index-34"></span><a class="pep reference external" href="https://peps.python.org/pep-0362/"><strong>PEP 362</strong></a>.</p>
 </dd>
 <dt id="term-per-object-lock">per-object lock<a class="headerlink" href="#term-per-object-lock" title="Link to this term">¶</a></dt><dd><p>A <a class="reference internal" href="#term-lock"><span class="xref std std-term">lock</span></a> associated with an individual object instance rather than
 a global lock shared across all objects. In <a class="reference internal" href="#term-free-threading"><span class="xref std std-term">free-threaded</span></a> Python, built-in types like <a class="reference internal" href="library/stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> and
@@ -1255,7 +1265,7 @@ the <code class="xref py py-class docutils literal notranslate"><span class="pre
 <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code> file system path by calling the <a class="reference internal" href="library/os.html#os.fspath" title="os.fspath"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.fspath()</span></code></a> function;
 <a class="reference internal" href="library/os.html#os.fsdecode" title="os.fsdecode"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.fsdecode()</span></code></a> and <a class="reference internal" href="library/os.html#os.fsencode" title="os.fsencode"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.fsencode()</span></code></a> can be used to guarantee a
 <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code> result instead, respectively. Introduced
-by <span class="target" id="index-33"></span><a class="pep reference external" href="https://peps.python.org/pep-0519/"><strong>PEP 519</strong></a>.</p>
+by <span class="target" id="index-35"></span><a class="pep reference external" href="https://peps.python.org/pep-0519/"><strong>PEP 519</strong></a>.</p>
 </dd>
 <dt id="term-PEP">PEP<a class="headerlink" href="#term-PEP" title="Link to this term">¶</a></dt><dd><p>Python Enhancement Proposal. A PEP is a design document
 providing information to the Python community, or describing a new
@@ -1267,10 +1277,10 @@ features, for collecting community input on an issue, and for documenting
 the design decisions that have gone into Python. The PEP author is
 responsible for building consensus within the community and documenting
 dissenting opinions.</p>
-<p>See <span class="target" id="index-34"></span><a class="pep reference external" href="https://peps.python.org/pep-0001/"><strong>PEP 1</strong></a>.</p>
+<p>See <span class="target" id="index-36"></span><a class="pep reference external" href="https://peps.python.org/pep-0001/"><strong>PEP 1</strong></a>.</p>
 </dd>
 <dt id="term-portion">portion<a class="headerlink" href="#term-portion" title="Link to this term">¶</a></dt><dd><p>A set of files in a single directory (possibly stored in a zip file)
-that contribute to a namespace package, as defined in <span class="target" id="index-35"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a>.</p>
+that contribute to a namespace package, as defined in <span class="target" id="index-37"></span><a class="pep reference external" href="https://peps.python.org/pep-0420/"><strong>PEP 420</strong></a>.</p>
 </dd>
 <dt id="term-positional-argument">positional argument<a class="headerlink" href="#term-positional-argument" title="Link to this term">¶</a></dt><dd><p>See <a class="reference internal" href="#term-argument"><span class="xref std std-term">argument</span></a>.</p>
 </dd>
@@ -1287,7 +1297,7 @@ a “solution of last resort” - every attempt will still be made to find
 a backwards compatible resolution to any identified problems.</p>
 <p>This process allows the standard library to continue to evolve over
 time, without locking in problematic design errors for extended periods
-of time.  See <span class="target" id="index-36"></span><a class="pep reference external" href="https://peps.python.org/pep-0411/"><strong>PEP 411</strong></a> for more details.</p>
+of time.  See <span class="target" id="index-38"></span><a class="pep reference external" href="https://peps.python.org/pep-0411/"><strong>PEP 411</strong></a> for more details.</p>
 </dd>
 <dt id="term-provisional-package">provisional package<a class="headerlink" href="#term-provisional-package" title="Link to this term">¶</a></dt><dd><p>See <a class="reference internal" href="#term-provisional-API"><span class="xref std std-term">provisional API</span></a>.</p>
 </dd>
@@ -1313,7 +1323,7 @@ people unfamiliar with Python sometimes use a numerical counter instead:</p>
 </dd>
 <dt id="term-qualified-name">qualified name<a class="headerlink" href="#term-qualified-name" title="Link to this term">¶</a></dt><dd><p>A dotted name showing the “path” from a module’s global scope to a
 class, function or method defined in that module, as defined in
-<span class="target" id="index-37"></span><a class="pep reference external" href="https://peps.python.org/pep-3155/"><strong>PEP 3155</strong></a>.  For top-level functions and classes, the qualified name
+<span class="target" id="index-39"></span><a class="pep reference external" href="https://peps.python.org/pep-3155/"><strong>PEP 3155</strong></a>.  For top-level functions and classes, the qualified name
 is the same as the object’s name:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">C</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="k">class</span><span class="w"> </span><span class="nc">D</span><span class="p">:</span>
@@ -1429,7 +1439,7 @@ The API remains documented and tested, but will not be enhanced further.</p>
 and will not emit warnings.</p>
 <p>See <a class="reference external" href="https://peps.python.org/pep-0387/#soft-deprecation">PEP 387: Soft Deprecation</a>.</p>
 </dd>
-<dt id="term-special-method">special method<a class="headerlink" href="#term-special-method" title="Link to this term">¶</a></dt><dd><p id="index-38">A method that is called implicitly by Python to execute a certain
+<dt id="term-special-method">special method<a class="headerlink" href="#term-special-method" title="Link to this term">¶</a></dt><dd><p id="index-40">A method that is called implicitly by Python to execute a certain
 operation on a type, such as addition.  Such methods have names starting
 and ending with double underscores.  Special methods are documented in
 <a class="reference internal" href="reference/datamodel.html#specialnames"><span class="std std-ref">Special method names</span></a>.</p>
@@ -1451,6 +1461,12 @@ issues such as incorrect types. See also <a class="reference internal" href="#te
 and the <a class="reference internal" href="library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> module.</p>
 </dd>
 <dt id="term-stdlib">stdlib<a class="headerlink" href="#term-stdlib" title="Link to this term">¶</a></dt><dd><p>An abbreviation of <a class="reference internal" href="#term-standard-library"><span class="xref std std-term">standard library</span></a>.</p>
+</dd>
+<dt id="term-steal">steal<a class="headerlink" href="#term-steal" title="Link to this term">¶</a></dt><dd><p>In Python’s C API, “<em>stealing</em>” an argument means that ownership of the
+argument is transferred to the called function.
+The caller must not use that reference after the call.
+Generally, functions that “steal” an argument do so even if they fail.</p>
+<p>See <a class="reference internal" href="c-api/intro.html#api-refcountdetails"><span class="std std-ref">Reference Count Details</span></a> for a full explanation.</p>
 </dd>
 <dt id="term-strong-reference">strong reference<a class="headerlink" href="#term-strong-reference" title="Link to this term">¶</a></dt><dd><p>In Python’s C API, a strong reference is a reference to an object
 which is owned by the code holding the reference.  The strong
@@ -1568,7 +1584,7 @@ For example:</p>
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> and <span class="target" id="index-39"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>, which describe this functionality.</p>
+<p>See <a class="reference internal" href="library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> and <span class="target" id="index-41"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>, which describe this functionality.</p>
 </dd>
 <dt id="term-type-hint">type hint<a class="headerlink" href="#term-type-hint" title="Link to this term">¶</a></dt><dd><p>An <a class="reference internal" href="#term-annotation"><span class="xref std std-term">annotation</span></a> that specifies the expected type for a variable, a class
 attribute, or a function parameter or return value.</p>
@@ -1578,12 +1594,12 @@ They can also aid IDEs with code completion and refactoring.</p>
 <p>Type hints of global variables, class attributes, and functions,
 but not local variables, can be accessed using
 <a class="reference internal" href="library/typing.html#typing.get_type_hints" title="typing.get_type_hints"><code class="xref py py-func docutils literal notranslate"><span class="pre">typing.get_type_hints()</span></code></a>.</p>
-<p>See <a class="reference internal" href="library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> and <span class="target" id="index-40"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>, which describe this functionality.</p>
+<p>See <a class="reference internal" href="library/typing.html#module-typing" title="typing: Support for type hints (see :pep:`484`)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">typing</span></code></a> and <span class="target" id="index-42"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>, which describe this functionality.</p>
 </dd>
 <dt id="term-universal-newlines">universal newlines<a class="headerlink" href="#term-universal-newlines" title="Link to this term">¶</a></dt><dd><p>A manner of interpreting text streams in which all of the following are
 recognized as ending a line: the Unix end-of-line convention <code class="docutils literal notranslate"><span class="pre">'\n'</span></code>,
 the Windows convention <code class="docutils literal notranslate"><span class="pre">'\r\n'</span></code>, and the old Macintosh convention
-<code class="docutils literal notranslate"><span class="pre">'\r'</span></code>.  See <span class="target" id="index-41"></span><a class="pep reference external" href="https://peps.python.org/pep-0278/"><strong>PEP 278</strong></a> and <span class="target" id="index-42"></span><a class="pep reference external" href="https://peps.python.org/pep-3116/"><strong>PEP 3116</strong></a>, as well as
+<code class="docutils literal notranslate"><span class="pre">'\r'</span></code>.  See <span class="target" id="index-43"></span><a class="pep reference external" href="https://peps.python.org/pep-0278/"><strong>PEP 278</strong></a> and <span class="target" id="index-44"></span><a class="pep reference external" href="https://peps.python.org/pep-3116/"><strong>PEP 3116</strong></a>, as well as
 <a class="reference internal" href="library/stdtypes.html#bytes.splitlines" title="bytes.splitlines"><code class="xref py py-func docutils literal notranslate"><span class="pre">bytes.splitlines()</span></code></a> for an additional use.</p>
 </dd>
 <dt id="term-variable-annotation">variable annotation<a class="headerlink" href="#term-variable-annotation" title="Link to this term">¶</a></dt><dd><p>An <a class="reference internal" href="#term-annotation"><span class="xref std std-term">annotation</span></a> of a variable or a class attribute.</p>
@@ -1599,8 +1615,8 @@ the Windows convention <code class="docutils literal notranslate"><span class="p
 </pre></div>
 </div>
 <p>Variable annotation syntax is explained in section <a class="reference internal" href="reference/simple_stmts.html#annassign"><span class="std std-ref">Annotated assignment statements</span></a>.</p>
-<p>See <a class="reference internal" href="#term-function-annotation"><span class="xref std std-term">function annotation</span></a>, <span class="target" id="index-43"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>
-and <span class="target" id="index-44"></span><a class="pep reference external" href="https://peps.python.org/pep-0526/"><strong>PEP 526</strong></a>, which describe this functionality.
+<p>See <a class="reference internal" href="#term-function-annotation"><span class="xref std std-term">function annotation</span></a>, <span class="target" id="index-45"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>
+and <span class="target" id="index-46"></span><a class="pep reference external" href="https://peps.python.org/pep-0526/"><strong>PEP 526</strong></a>, which describe this functionality.
 Also see <a class="reference internal" href="howto/annotations.html#annotations-howto"><span class="std std-ref">Annotations Best Practices</span></a>
 for best practices on working with annotations.</p>
 </dd>
@@ -1701,7 +1717,7 @@ understanding and using the language.  The listing can be found by typing
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="index.html">3.14.6 Documentation</a> &#187;
+      <a href="index.html">3.14.7 Documentation</a> &#187;
     </li>
 
         <li class="nav-item nav-item-this"><a href="">Glossary</a></li>
@@ -1745,7 +1761,7 @@ understanding and using the language.  The listing can be found by typing
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

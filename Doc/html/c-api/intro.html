@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>Introduction &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -201,7 +201,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python/C API reference manual</a> &#187;</li>
@@ -748,21 +748,22 @@ expand to some compiler-specific suffixes on some older compilers.</p>
 <dl class="c macro">
 <dt class="sig sig-object c" id="c.Py_MEMCPY">
 <span class="sig-name descname"><span class="n"><span class="pre">Py_MEMCPY</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">dest</span></span>, <span class="n"><span class="pre">src</span></span>, <span class="n"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.Py_MEMCPY" title="Link to this definition">¶</a><br /></dt>
-<dd><p>This is a <a class="reference internal" href="../glossary.html#term-soft-deprecated"><span class="xref std std-term">soft deprecated</span></a> alias to <code class="xref c c-func docutils literal notranslate"><span class="pre">memcpy()</span></code>.
-Use <code class="xref c c-func docutils literal notranslate"><span class="pre">memcpy()</span></code> directly instead.</p>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since version 3.14: </span>The macro is <a class="reference internal" href="../glossary.html#term-soft-deprecated"><span class="xref std std-term">soft deprecated</span></a>.</p>
+<dd><p>This is an alias to <code class="xref c c-func docutils literal notranslate"><span class="pre">memcpy()</span></code>.</p>
+<div class="versionchanged soft-deprecated">
+<p><span class="versionmodified soft-deprecated"><a class="reference internal" href="../glossary.html#term-soft-deprecated">Soft deprecated</a> since version 3.14: </span>Use <code class="xref c c-func docutils literal notranslate"><span class="pre">memcpy()</span></code> directly instead.</p>
 </div>
 </dd></dl>
 
 <dl class="c macro">
 <dt class="sig sig-object c" id="c.Py_VA_COPY">
 <span class="sig-name descname"><span class="n"><span class="pre">Py_VA_COPY</span></span></span><a class="headerlink" href="#c.Py_VA_COPY" title="Link to this definition">¶</a><br /></dt>
-<dd><p>This is a <a class="reference internal" href="../glossary.html#term-soft-deprecated"><span class="xref std std-term">soft deprecated</span></a> alias to the C99-standard <code class="docutils literal notranslate"><span class="pre">va_copy</span></code>
-function.</p>
+<dd><p>This is an alias to the C99-standard <code class="docutils literal notranslate"><span class="pre">va_copy</span></code> function.</p>
 <p>Historically, this would use a compiler-specific method to copy a <code class="docutils literal notranslate"><span class="pre">va_list</span></code>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.6: </span>This is now an alias to <code class="docutils literal notranslate"><span class="pre">va_copy</span></code>.</p>
+</div>
+<div class="versionchanged soft-deprecated">
+<p><span class="versionmodified soft-deprecated"><a class="reference internal" href="../glossary.html#term-soft-deprecated">Soft deprecated</a> since version 3.14.</span></p>
 </div>
 </dd></dl>
 
@@ -859,9 +860,11 @@ the caller is said to <em>borrow</em> the reference. Nothing needs to be done fo
 <a class="reference internal" href="../glossary.html#term-borrowed-reference"><span class="xref std std-term">borrowed reference</span></a>.</p>
 <p>Conversely, when a calling function passes in a reference to an  object, there
 are two possibilities: the function <em>steals</em> a  reference to the object, or it
-does not.  <em>Stealing a reference</em> means that when you pass a reference to a
-function, that function assumes that it now owns that reference, and you are not
-responsible for it any longer.</p>
+does not.</p>
+<p><em>Stealing a reference</em> means that when you pass a reference to a
+function, that function assumes that it now owns that reference.
+Since the new owner can use <code class="xref c c-func docutils literal notranslate"><span class="pre">Py_DECREF()</span></code> at its discretion,
+you (the caller) must not use that reference after the call.</p>
 <p id="index-4">Few functions steal references; the two notable exceptions are
 <a class="reference internal" href="list.html#c.PyList_SetItem" title="PyList_SetItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyList_SetItem()</span></code></a> and <a class="reference internal" href="tuple.html#c.PyTuple_SetItem" title="PyTuple_SetItem"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyTuple_SetItem()</span></code></a>, which  steal a reference
 to the item (but not to the tuple or list into which the item is put!).  These
@@ -1208,7 +1211,7 @@ not-Python-specific <code class="xref c c-macro docutils literal notranslate"><s
 in the Unix build, compiler optimization is disabled.</p>
 <p>In addition to the reference count debugging described below, extra checks are
 performed, see <a class="reference internal" href="../using/configure.html#debug-build"><span class="std std-ref">Python Debug Build</span></a>.</p>
-<p>Defining <code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_TRACE_REFS</span></code> enables reference tracing
+<p>Defining <code class="docutils literal notranslate"><span class="pre">Py_TRACE_REFS</span></code> enables reference tracing
 (see the <a class="reference internal" href="../using/configure.html#cmdoption-with-trace-refs"><code class="xref std std-option docutils literal notranslate"><span class="pre">configure</span> <span class="pre">--with-trace-refs</span> <span class="pre">option</span></code></a>).
 When defined, a circular doubly linked list of active objects is maintained by adding two extra
 fields to every <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyObject</span></code></a>.  Total allocations are tracked as well.  Upon
@@ -1369,7 +1372,7 @@ desirable in the first place.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API reference manual</a> &#187;</li>
@@ -1414,7 +1417,7 @@ desirable in the first place.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     
