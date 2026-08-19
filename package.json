@@ -1,0 +1,19 @@
+{
+  "name": "languages_project",
+  "version": "1.0.0",
+  "main": "D:/Languages_Project/Languages_Project/index.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "38.0.0"
+  },
+  "dependencies": {
+    "python-shell": "^5.0.0"
+  }
+}
