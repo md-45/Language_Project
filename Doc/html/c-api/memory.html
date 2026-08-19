@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>Memory Management &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Management &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -191,7 +191,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python/C API reference manual</a> &#187;</li>
@@ -284,7 +284,7 @@ memory footprint as a whole. Consequently, under certain circumstances, the
 Python memory manager may or may not trigger appropriate actions, like garbage
 collection, memory compaction or other preventive procedures. Note that by using
 the C library allocator as shown in the previous example, the allocated memory
-for the I/O buffer escapes completely the Python memory manager.</p>
+for the I/O buffer completely escapes the Python memory manager.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>The <span class="target" id="index-1"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONMALLOC"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONMALLOC</span></code></a> environment variable can be used to configure
@@ -352,7 +352,7 @@ been initialized in any way.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyMem_RawCalloc">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyMem_RawCalloc</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">nelem</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">elsize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyMem_RawCalloc" title="Link to this definition">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.13.</em><p>Allocates <em>nelem</em> elements each whose size in bytes is <em>elsize</em> and returns
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.13.</em><p>Allocates <em>nelem</em> elements each of size <em>elsize</em> bytes and returns
 a pointer of type <span class="c-expr sig sig-inline c"><span class="kt">void</span><span class="p">*</span></span> to the allocated memory, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if the
 request fails. The memory is initialized to zeros.</p>
 <p>Requesting zero elements or elements of size zero bytes returns a distinct
@@ -423,7 +423,7 @@ been initialized in any way.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyMem_Calloc">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyMem_Calloc</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">nelem</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">elsize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyMem_Calloc" title="Link to this definition">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.7.</em><p>Allocates <em>nelem</em> elements each whose size in bytes is <em>elsize</em> and returns
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.7.</em><p>Allocates <em>nelem</em> elements each of size <em>elsize</em> bytes and returns
 a pointer of type <span class="c-expr sig sig-inline c"><span class="kt">void</span><span class="p">*</span></span> to the allocated memory, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if the
 request fails. The memory is initialized to zeros.</p>
 <p>Requesting zero elements or elements of size zero bytes returns a distinct
@@ -589,7 +589,7 @@ been initialized in any way.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyObject_Calloc">
 <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyObject_Calloc</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">nelem</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">elsize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyObject_Calloc" title="Link to this definition">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.7.</em><p>Allocates <em>nelem</em> elements each whose size in bytes is <em>elsize</em> and returns
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.7.</em><p>Allocates <em>nelem</em> elements each of size <em>elsize</em> bytes and returns
 a pointer of type <span class="c-expr sig sig-inline c"><span class="kt">void</span><span class="p">*</span></span> to the allocated memory, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if the
 request fails. The memory is initialized to zeros.</p>
 <p>Requesting zero elements or elements of size zero bytes returns a distinct
@@ -1201,7 +1201,7 @@ object types in C.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API reference manual</a> &#187;</li>
@@ -1246,7 +1246,7 @@ object types in C.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     

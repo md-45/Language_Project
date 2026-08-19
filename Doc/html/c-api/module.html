@@ -16,21 +16,21 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
 
-    <title>Module Objects &#8212; Python 3.14.6 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Objects &#8212; Python 3.14.7 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=234b1a7c" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=4365c8fe" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=5349f25f" />
     
-    <script src="../_static/documentation_options.js?v=8b05a55d"></script>
+    <script src="../_static/documentation_options.js?v=2f7d2144"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Python 3.14.6 documentation"
+          title="Search within Python 3.14.7 documentation"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -180,7 +180,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API reference manual</a> &#187;</li>
@@ -787,8 +787,8 @@ used internally to create a key object.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyModule_Add">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyModule_Add</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">module</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_Add" title="Link to this definition">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.13.</em><p>Similar to <a class="reference internal" href="#c.PyModule_AddObjectRef" title="PyModule_AddObjectRef"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_AddObjectRef()</span></code></a>, but “steals” a reference
-to <em>value</em>.
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a> since version 3.13.</em><p>Similar to <a class="reference internal" href="#c.PyModule_AddObjectRef" title="PyModule_AddObjectRef"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_AddObjectRef()</span></code></a>, but “<a class="reference internal" href="../glossary.html#term-steal"><span class="xref std std-term">steals</span></a>”
+a reference to <em>value</em> (even on error).
 It can be called with a result of function that returns a new reference
 without bothering to check its result or even saving it to a variable.</p>
 <p>Example usage:</p>
@@ -805,8 +805,8 @@ without bothering to check its result or even saving it to a variable.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.PyModule_AddObject">
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyModule_AddObject</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">module</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyModule_AddObject" title="Link to this definition">¶</a><br /></dt>
-<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Similar to <a class="reference internal" href="#c.PyModule_AddObjectRef" title="PyModule_AddObjectRef"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_AddObjectRef()</span></code></a>, but steals a reference to
-<em>value</em> on success (if it returns <code class="docutils literal notranslate"><span class="pre">0</span></code>).</p>
+<dd><em class="stableabi"> Part of the <a class="reference internal" href="stable.html#stable"><span class="std std-ref">Stable ABI</span></a>.</em><p>Similar to <a class="reference internal" href="#c.PyModule_AddObjectRef" title="PyModule_AddObjectRef"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_AddObjectRef()</span></code></a>, but <a class="reference internal" href="../glossary.html#term-steal"><span class="xref std std-term">steals</span></a>
+a reference to <em>value</em> on success (if it returns <code class="docutils literal notranslate"><span class="pre">0</span></code>).</p>
 <p>The new <a class="reference internal" href="#c.PyModule_Add" title="PyModule_Add"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_Add()</span></code></a> or <a class="reference internal" href="#c.PyModule_AddObjectRef" title="PyModule_AddObjectRef"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_AddObjectRef()</span></code></a>
 functions are recommended, since it is
 easy to introduce reference leaks by misusing the
@@ -1088,7 +1088,7 @@ Return <code class="docutils literal notranslate"><span class="pre">-1</span></c
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.14.6 Documentation</a> &#187;
+      <a href="../index.html">3.14.7 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API reference manual</a> &#187;</li>
@@ -1134,7 +1134,7 @@ Return <code class="docutils literal notranslate"><span class="pre">-1</span></c
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br>
     <br>
-      Last updated on Jun 10, 2026 (10:11 UTC).
+      Last updated on Aug 05, 2026 (10:35 UTC).
     
       <a href="/bugs.html">Found a bug</a>?
     
