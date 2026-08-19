@@ -1,0 +1,114 @@
+/* Import fonts */
+
+/* Title font */
+@font-face {
+    font-family: "Jersey 10";
+    src: url("Fonts/jersey-10-latin-400-normal.ttf") format("truetype");
+}
+
+/* Menu font */
+
+/* Title styling */
+h1 {
+    text-align: center;
+    font-family: "Jersey 10", sans-serif;
+    font-style: normal;
+    font-size: 48pt;
+    background: -webkit-linear-gradient(#F4F5B2, #FF45BE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: -29px;
+    top: 60px;
+    padding-top: 20pt;
+}
+
+/* Body styling, incorporating dual tone */
+body {
+    background: #7F55FC;
+    border-style: solid;
+    border-width: 22px;
+    border-radius: 10px;
+    border-color: #200082;
+}
+
+/* Making screen size of design */
+.music_contain {
+    width: 292px;
+    height: 318px;
+    border-radius: 10px;
+}
+
+/* Triangle positioning */
+.triangles {
+    align-items: center;
+}
+
+/* Measure lines positioning */
+#Measure_Lines {
+    width: 100%;
+    height: 64px;
+    padding-top: 30pt;
+    left: -140px;
+    top: 174px;
+}
+
+/* Notes styling */
+#G-unselec {
+    width: 23.76px;
+    height: 66.82px;
+    left: 30px;
+    top: -84px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+#B-unselec {
+    width: 23.76px;
+    height: 66.82px;
+    left: 70px;
+    top: -55px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+#D-unselec {
+    width: 23.76px;
+    height: 66.82px;
+    left: 120px;
+    top: -70px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+#F-unselec {
+    width: 23.76px;
+    height: 66.82px;
+    left: 170px;
+    top: -83px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Notes animations */
+#G-unselec:hover {
+    transform: scale(1.5);
+}
+
+#B-unselec:hover {
+    transform: scale(1.5); 
+}
+
+#D-unselec:hover {
+    transform: scale(1.5); 
+}
+
+#F-unselec:hover {
+    transform: scale(1.5); 
+}
+
+/* Credits button positioning */
+#Credits {
+    padding-top: 25pt;
+    left: -32px;
+    position: relative;
+}
