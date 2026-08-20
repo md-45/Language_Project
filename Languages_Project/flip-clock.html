@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-        <meta
+
+<head>
+    <meta charset="UTF-8" />
+    
+    <meta
         http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self'"
-        />
-        <meta
+    />
+
+    <meta
         http-equiv="X-Content-Security-Policy"
         content="default-src 'self'; script-src 'self'"
-        />
+    />
         
-        <title>Start menu</title>
+    <title>Flip Clock</title>
 
-        <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
 
-    </head>
+<body>
+    <a href="index.html"><h1>Flip Clock</h1></a>
 
-    <body>
-        <a href="index.html"><h1>Flip Clock</h1></a>
-    </body>
+    <button id="run-python-time">
+        Run Python Script
+    </button>
+
+    <script src="./flip-clock.js"></script>
+
+</body>
+
 </html>

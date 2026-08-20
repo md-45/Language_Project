@@ -31,6 +31,22 @@ ipcMain.on("run-python", () => {
 
 });
 
+ipcMain.on("run-python-time", () => {
+
+    const python = spawn("python", [
+        "D:/Languages_Project/Languages_Project/countdown_timer.py"
+    ]);
+
+    python.stdout.on("data", (data) => {
+        console.log(`Python: ${data}`);
+    });
+
+    python.stderr.on("data", (data) => {
+        console.error(`Python error: ${data}`);
+    });
+
+});
+
 
 app.whenReady().then(() => {
     createWindow();
